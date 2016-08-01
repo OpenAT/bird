@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <!-- CUSTOM BOOTSTRAP THEME FOR BIRD -->
+    <!-- HINT: http://getbootstrap.com/customize -->
+    <template id="bird_theme_option" inherit_id="website.themes" name="bird theme option">
+        <xpath expr='//div[@id="themes-list"]' position="inside">
+            <div class="col-md-4">
+                <div class="well text-center">
+                    <div class="image">
+                        <img class="img-responsive" src="/bird_config/static/src/img/bird_theme_thumbnail.png"
+                             alt="BIRD"/>
+                    </div>
+                    <div class="options">
+                        <h3>BIRD</h3>
+                        <p>Birdlife Österreich</p>
+                        <a class="btn btn-info" href="/website/theme_change?theme_id=website.theme_bird">Apply</a>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <!-- load bird theme css and js -->
+    <template id="website.theme_bird" name="BIRD" inherit_id="website.theme" active="False" customize_show="True">
+        <xpath expr="//link[@id='bootstrap_css']" position="replace">
+            <link rel='stylesheet' href='/bird_config/static/src/css/bootstrap_bird/css/bootstrap.min.css' t-ignore="true"/>
+            <link rel='stylesheet' href='/bird_config/static/src/css/bootstrap_bird/css/bootstrap-theme.min.css' t-ignore="true"/>
+            <link rel='stylesheet' href='/bird_config/static/src/css/bird.css' t-ignore="true"/>
+        </xpath>
+    </template>
+
+    <!-- GOOGLE WEBMASTER TOOLS -->
+    <!--
+    <template id="google_webmastertools_site_verification" inherit_id="website.layout" name="Google Webmastertools site verification">
+        <xpath expr="//head//title" position="after">
+            <meta name="google-site-verification" content="google1234567890.html"/>
+        </xpath>
+    </template>
+    -->
+
+    </data>
+</openerp>

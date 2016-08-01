@@ -1,0 +1,229 @@
+/* --------------- */
+/* BOOTSTRAP FIXES */
+/* --------------- */
+
+main .container {
+    width: 100%;
+    max-width: 1024px;
+}
+/* Media width fixes */
+/* TODO: change and understand max container sizes: http://getbootstrap.com/customize/#container-sizes */
+/* Die Mediaselektoren beziehen sich auf die Iframe Größe z.B. 740px. Die überliegende Seite hat aber gerade 1440px...
+Wird nun die Seite schmäler und verkleinert aufgrund Responsive Design den Iframe so geht der Media selektor
+auf die Größe des Iframes und nicht auf die darüberliegende Seitengröße.
+*/
+/*
+@media (min-width: 773px) {
+    .container {
+        width: 1155px;
+        width: inherit;
+    }
+}
+@media (min-width: 600px) {
+    .container {
+        width: 955px;
+        width: inherit;
+    }
+}
+@media (min-width: 500px) {
+    .container {
+        width: 735px;
+        width: inherit;
+    }
+}
+*/
+.row {
+     margin-left: 0;
+     margin-right: 0;
+}
+
+
+/* --------------- */
+/* EXTENDED DESIGN */
+/* --------------- */
+
+/* Links */
+/*a { text-decoration: underline; }*/
+/*a:hover { background-color: #3f3f3f; }*/
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+}
+
+body {
+    color: black;
+}
+/* BACKGROUND SNIPPED COLORS */
+.oe_blue { background-color: #036ba2 !important; }
+.oe_blue_light { background-color: rgba(3, 107, 162, 0.33) !important; }
+.oe_green { background-color: #0f921a !important; }
+.oe_green_light { background-color: rgba(15, 146, 26, 0.33) !important; }
+.oe_orange { background-color: #A25C03 !important; }
+.oe_brown { background-color: #553000 !important; }
+.oe_brown_light { background-color: rgba(162, 92, 3, 0.33) !important; }
+/* Headers */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: normal;
+}
+
+/* Bold Text */
+b, strong {
+    font-weight: normal;
+}
+
+/* Modal Box Trigger */
+.btn-link.information-modal-box-trigger:hover {
+    color: #db1921;
+}
+
+/* NAVBAR*/
+/*
+*/
+.navbar-default .navbar-nav>li>a {
+    padding-top: 80px !important;
+    padding-bottom: 5px !important;
+    font-size: 18px;
+}
+
+.navbar.navbar-static-top ul.nav > li.divider {
+    height: 18px !important;
+    max-height: 18px !important;
+    margin-top: 80px !important;
+
+}
+
+/* Nav-Tabs */
+
+.nav_tabs>li {
+    border: 1px #3f3f3f;
+}
+.nav_tabs > ul {
+    border: 1px solid black;
+    padding-bottom: 2px;
+}
+.nav>li>a:hover {
+    background-color: #3f3f3f;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    background-color: #fff;
+}
+.tab-content {
+    background-color: #fff;
+    padding-bottom: 2em;
+}
+.tab-pane { padding: 1em; }
+
+#top_menu > li.active > a {
+    color: #00a8c6;
+}
+
+/* jquery-validate control-icons (green arrow or red cross) */
+#wsd_checkout_form .form-control-feedback {
+    top: 24px !important;
+}
+
+/* Main Navigation: Navbar */
+.navbar.navbar-static-top ul.nav > li.divider {
+    height: 60px;
+}
+header a.navbar-brand img {
+    margin-top: 36px;
+}
+
+/* Checkout Box */
+.price_donate {
+    margin-top: 1em;
+}
+#price_donate {
+    color: inherit;
+}
+
+
+@media (min-width: 500px) {
+    .form-inline .form-group {
+        display: inherit;
+    }
+}
+
+/* checkoutform
+TODO Check ob diese Settings auch über BOOTSTRAP einstellbar sind
+*/
+#wsd_checkout_form .form-control {
+    padding: auto;
+}
+.row .wsd_opc_delivery {
+    display: none;
+}
+#website_sale_login_info {
+    display: none;
+}
+
+@media (max-width: 740px) {
+.col-md-push-8 {
+    left: initial;
+}
+.col-md-offset-1 {
+    margin-left: initial;
+}
+#wsd_checkout_page_right_column {
+    width: 100%;
+    float:left;
+}
+#wsd_checkout_page_left_column {
+    right: initial;
+}
+.col-md-8 {
+    width: 100%;
+}
+/* Warenkorb*/
+#right_column {
+    display:none;
+}
+}
+/*
+#footer {
+    display: none;
+}
+*/
+
+footer {
+    background: #00669e !important;
+    /*color: #0f921a !important;*/
+    color: white !important;
+}
+
+footer > div.container.mt16.mb8 > div.text-muted {
+  color: #0f921a;
+}
+
+main .container {
+    max-width: 900px;
+    margin: auto;
+    display: block !important;
+}
+
+main .container img {
+    max-width: 100%;
+}
+
+header a.navbar-brand img {
+    max-height: 90px !important;
+}
+header a.navbar-brand img {
+    margin-top: 10px;
+}
+    #popupbox .container.popup_box {
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 10px black !important;
+    padding-bottom: 10px !important;
+}
+    .ppt_opc #wsd-checkout-box img.product-image {
+        width: auto !important;
+    }
+
+#top_menu > li:nth-child(1) > a {
+    display: none;
+    }
