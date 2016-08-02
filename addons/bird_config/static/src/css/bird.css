@@ -62,6 +62,7 @@ body {
 .oe_orange { background-color: #A25C03 !important; }
 .oe_brown { background-color: #553000 !important; }
 .oe_brown_light { background-color: rgba(162, 92, 3, 0.33) !important; }
+.oe_black_light { background-color: rgba(0, 0, 0, 0.3); !important}
 /* Headers */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: normal;
@@ -269,3 +270,13 @@ header a.navbar-brand img {
 #top_menu > li.active > a {
     color: #55ab26;
 }
+.oe_structure .jumbotron {
+
+    max-width: 1170px;
+    margin: auto;
+}
+/*
+.ppt_donate p {
+    mix-blend-mode: overlay lighten;
+}
+*/
