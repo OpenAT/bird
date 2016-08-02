@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=ce495428b51016a8580c834ab4fc6522)
- * Config saved to config.json and https://gist.github.com/ce495428b51016a8580c834ab4fc6522
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=6ffb5645cf1e06d6488d0a063b7b84ef)
+ * Config saved to config.json and https://gist.github.com/6ffb5645cf1e06d6488d0a063b7b84ef
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -1190,7 +1190,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
 }
@@ -1270,15 +1270,15 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 22px;
+  font-size: 36px;
 }
 h2,
 .h2 {
-  font-size: 19px;
+  font-size: 25px;
 }
 h3,
 .h3 {
-  font-size: 19px;
+  font-size: 21px;
 }
 h4,
 .h4 {
@@ -3536,7 +3536,7 @@ tbody.collapse.in {
   list-style: none;
   font-size: 14px;
   text-align: left;
-  background-color: #ffffff;
+  background-color: #000000;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -3561,14 +3561,14 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333333;
+  color: #ffffff;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #262626;
-  background-color: #f5f5f5;
+  color: #ffffff;
+  background-color: rgba(128, 128, 128, 0.25);
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,

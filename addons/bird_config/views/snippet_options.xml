@@ -3,8 +3,6 @@
 
 <template id="website_bird_snippet_options" inherit_id="website.snippet_options">
 
-
-
     <!-- Replace Background Colors and Images -->
     <xpath expr="//div[@data-snippet-option-id='background']/li" position="replace">
         <li class="dropdown-submenu" data-required="true">
@@ -57,6 +55,30 @@
             <li data-value=""><a>None</a></li>
             <li><a style="background: none; padding: 5px; border-top: 1px solid #ddd;"></a></li>
             <li class="oe_custom_bg" data-value="oe_img_bg"><a><b>Choose an image...</b></a></li>
+            </ul>
+        </li>
+    </xpath>
+
+    <!-- Responsive Design Classes -->
+    <xpath expr="//div[@data-snippet-option-id='blog-style']//li" position="after">
+        <li class="dropdown-submenu" data-required="true">
+            <a tabindex="-1" href="#">Responisve</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                    <a tabindex="-2" href="#">Mobile</a>
+                        <ul class="dropdown-menu">
+                            <li data-value='hidden-xs'><a>Am Handy ausblenden</a></li>
+
+                        </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-2" href="#">Tablet</a>
+                        <ul class="dropdown-menu">
+                            <li data-value='hidden-sm'><a>auf Mobilgeräten Ausblenden</a></li>
+                        </ul>
+                </li>
+                <li data-value=""><a>Keine</a></li>
             </ul>
         </li>
     </xpath>
