@@ -60,29 +60,77 @@
         </li>
     </xpath>
 
-    <!-- Responsive Design Classes -->
-    <xpath expr="//div[@data-snippet-option-id='blog-style']//li" position="after">
+    <!-- spezial Design Classes for carousel and section -->
+    <xpath expr="." position="inside">
+        <div data-snippet-option-id='special_carousel'
+        data-selector=".extended_banner">
         <li class="dropdown-submenu" data-required="true">
-            <a tabindex="-1" href="#">Responisve</a>
+            <a tabindex="-1" href="#">Special classes</a>
             <ul class="dropdown-menu">
                 <li class="dropdown-submenu">
                     <a tabindex="-2" href="#">Mobile</a>
                         <ul class="dropdown-menu">
                             <li data-value='hidden-xs'><a>Am Handy ausblenden</a></li>
-
                         </ul>
                 </li>
-
                 <li class="dropdown-submenu">
                     <a tabindex="-2" href="#">Tablet</a>
                         <ul class="dropdown-menu">
                             <li data-value='hidden-sm'><a>auf Mobilgeräten Ausblenden</a></li>
                         </ul>
                 </li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-2" href="#">Special</a>
+                        <ul class="dropdown-menu">
+                            <li data-value='move-into-header'><a> Move into Header</a></li>
+                        </ul>
+                </li>
                 <li data-value=""><a>Keine</a></li>
             </ul>
         </li>
+        </div>
     </xpath>
+    </template>
+
+   <!-- Carousel Snippet mit Responsive Optionen -->
+    <template id="website_bird_snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']" postition="inside">
+
+            <div>
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img" src="/website/static/src/img/blocks/block_banner.png"/>
+                    <span class="oe_snippet_thumbnail_title">extended Banner</span>
+                </div>
+                <section class="oe_snippet_body extended_banner">
+                    <div id="myCarousel" class="carousel slide mb32" style="height: 420px;">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators hidden">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active" style="background-image: url('/website/static/src/img/banner/color_splash.jpg')">
+                                <div class="container">
+                                    <div class="row content">
+                                        <div class="carousel-content col-md-6 col-sm-12">
+                                                <h2>Your Banner Title</h2>
+                                                <h3>Click to customize this text</h3>
+                                                <p>
+                                                    <a href="/page/website.contactus" class="btn btn-success btn-large">Contact us</a>
+                                                </p>
+                                        </div>
+                                        <div class="carousel-img col-md-6 hidden-sm hidden-xs">
+                                            <img class="img-responsive" src="/website/static/src/img/banner/banner_picture.png" alt="Banner Odoo Image"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-control left hidden" data-target="#myCarousel" data-slide="prev" style="width: 10%"><i class="fa fa-chevron-left"></i></div>
+                        <div class="carousel-control right hidden" data-target="#myCarousel" data-slide="next" style="width: 10%"><i class="fa fa-chevron-right"></i></div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
     </template>
 </data>
 </openerp>
