@@ -2,6 +2,12 @@
 /* BOOTSTRAP FIXES */
 /* --------------- */
 
+/* FONT TESTS */
+@font-face {
+font-family: MuseoSans-100;
+src: url("MuseoSans_100.otf") format("opentype");
+}
+
 main .container {
     width: 100%;
     max-width: 1024px;
@@ -53,6 +59,7 @@ auf die Größe des Iframes und nicht auf die darüberliegende Seitengröße.
 
 body {
     color: black;
+    font-family: "MuseoSans-100",Helvetica,Arial,sans-serif;
 }
 /* BACKGROUND SNIPPED COLORS */
 .oe_blue { background-color: #036ba2 !important; }
