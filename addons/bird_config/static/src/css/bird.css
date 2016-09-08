@@ -180,6 +180,7 @@ auf die Größe des Iframes und nicht auf die darüberliegende Seitengröße.
 body {
     color: black;
     font-family: "MuseoSans100-Regular",Helvetica,Arial,sans-serif;
+    font-size: 1.5em;
 }
 /* BACKGROUND SNIPPED COLORS */
 .oe_blue { background-color: #036ba2 !important; }
