@@ -343,6 +343,7 @@ myCarousel_1469701223895 {
 }
 .dropdown-menu>li>a {
     /*color: white;*/
+    font-family: "MuseoSans500-Regular",Helvetica,Arial,sans-serif;
 }
 .dropdown-menu>li>a:hover {
     background-color: rgba(128, 128, 128, 0.25);
