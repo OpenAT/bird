@@ -4,9 +4,129 @@
 
 /* FONT TESTS */
 @font-face {
-font-family: MuseoSans-100;
-src: url("fonts/MuseoSans_100.otf") format("opentype");
+font-family: Museo100-Italic;
+src: url("fonts/Museo100-italic.otf") format("opentype");
 }
+@font-face {
+font-family: Museo100-Regular;
+src: url("fonts/Museo100-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: Museo300-Italic;
+src: url("fonts/Museo300-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo300-Regular;
+src: url("fonts/Museo300-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: Museo500-Italic;
+src: url("fonts/Museo500-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo500-Regular;
+src: url("fonts/Museo500-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: Museo700-Italic;
+src: url("fonts/Museo700-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo700-Regular;
+src: url("fonts/Museo700-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: Museo900-Italic;
+src: url("fonts/Museo900-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo900-Regular;
+src: url("fonts/Museo900-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: MuseoSans100-Italic;
+src: url("fonts/MuseoSans100-italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans100-Regular;
+src: url("fonts/MuseoSans100-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans300-Italic;
+src: url("fonts/MuseoSans300-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans300-Regular;
+src: url("fonts/MuseoSans300-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans500-Italic;
+src: url("fonts/MuseoSans500-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans500-Regular;
+src: url("fonts/MuseoSans500-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans700-Italic;
+src: url("fonts/MuseoSans700-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans700-Regular;
+src: url("fonts/MuseoSans700-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans900-Italic;
+src: url("fonts/MuseoSans900-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans900-Regular;
+src: url("fonts/MuseoSans900-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: MuseoSansCnd100-Italic;
+src: url("fonts/MuseoSansCnd100-italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd100-Regular;
+src: url("fonts/MuseoSansCnd100-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd300-Italic;
+src: url("fonts/MuseoSansCnd300-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd300-Regular;
+src: url("fonts/MuseoSansCnd300-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd500-Italic;
+src: url("fonts/MuseoSansCnd500-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd500-Regular;
+src: url("fonts/MuseoSansCnd500-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd700-Italic;
+src: url("fonts/MuseoSansCnd700-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd700-Regular;
+src: url("fonts/MuseoSansCnd700-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd900-Italic;
+src: url("fonts/MuseoSansCnd900-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd900-Regular;
+src: url("fonts/MuseoSansCnd900-Regular.otf") format("opentype");
+}
+
+
 
 main .container {
     width: 100%;
@@ -59,7 +179,7 @@ auf die Größe des Iframes und nicht auf die darüberliegende Seitengröße.
 
 body {
     color: black;
-    font-family: "MuseoSans-100",Helvetica,Arial,sans-serif;
+    font-family: "MuseoSans100-Regular",Helvetica,Arial,sans-serif;
 }
 /* BACKGROUND SNIPPED COLORS */
 .oe_blue { background-color: #036ba2 !important; }
@@ -72,8 +192,32 @@ body {
 .oe_black_light { background-color: rgba(0, 0, 0, 0.3); !important}
 /* Headers */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-weight: normal;
+    font-weight: bold;
 }
+h1 {
+    font-family: Museo300-Regular;
+    font-size: 50px;
+    color: #006eab;
+    margin-top:4%;
+    margin-bottom:4%;
+}
+h2 {
+    font-family: Museo300-Regular;
+    font-size: 40px;
+}
+h3 {
+    font-family: Museo300-Regular;
+    font-size: 30px;
+}
+h4 {
+    font-family: Museo300-Regular;
+    font-size: 25px;
+}
+h5 {
+    font-family: Museo300-Regular;
+    font-size: 20px;
+}
+
 
 /* Bold Text */
 b, strong {
