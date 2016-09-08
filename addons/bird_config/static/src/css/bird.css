@@ -232,8 +232,10 @@ b, strong {
 /* NAVBAR*/
 
 #top_menu>li>a {
+    font-family: MuseoSans500-Regular;
     text-transform: uppercase;
-    /*font-weight: bold;*/
+    text-shadow: 1px 1px 10px black;
+    font-weight: bold;
 }
 
 .navbar-default {
