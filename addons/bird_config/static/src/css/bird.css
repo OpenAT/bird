@@ -5,7 +5,7 @@
 /* FONT TESTS */
 @font-face {
 font-family: MuseoSans-100;
-src: url("MuseoSans_100.otf") format("opentype");
+src: url("/fonts/MuseoSans_100.otf") format("opentype");
 }
 
 main .container {
@@ -59,7 +59,7 @@ auf die Größe des Iframes und nicht auf die darüberliegende Seitengröße.
 
 body {
     color: black;
-    font-family: "/fonts/MuseoSans-100",Helvetica,Arial,sans-serif;
+    font-family: "MuseoSans-100",Helvetica,Arial,sans-serif;
 }
 /* BACKGROUND SNIPPED COLORS */
 .oe_blue { background-color: #036ba2 !important; }
