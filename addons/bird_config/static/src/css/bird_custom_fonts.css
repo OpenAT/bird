@@ -61,8 +61,7 @@ font-family: MuseoSans500-Italic;
 src: url("fonts/MuseoSans500-Italic.otf") format("opentype");
 }
 @font-face {
-font-family: MuseoSans100-Regular;
-    font-weight: 'bold';
+font-family: MuseoSans500-Regular;
 src: url("fonts/MuseoSans500-Regular.otf") format("opentype");
 }
 @font-face {
