@@ -1,0 +1,124 @@
+/* FONT TESTS */
+@font-face {
+font-family: Museo100-Italic;
+src: url("fonts/Museo100-italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo100-Regular;
+src: url("fonts/Museo100-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: Museo300-Italic;
+src: url("fonts/Museo300-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo300-Regular;
+src: url("fonts/Museo300-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: Museo500-Italic;
+src: url("fonts/Museo500-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo500-Regular;
+src: url("fonts/Museo500-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: Museo700-Italic;
+src: url("fonts/Museo700-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo700-Regular;
+src: url("fonts/Museo700-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: Museo900-Italic;
+src: url("fonts/Museo900-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: Museo900-Regular;
+src: url("fonts/Museo900-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: MuseoSans100-Italic;
+src: url("fonts/MuseoSans100-italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans100-Regular;
+src: url("fonts/MuseoSans100-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans300-Italic;
+src: url("fonts/MuseoSans300-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans300-Regular;
+src: url("fonts/MuseoSans300-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans500-Italic;
+src: url("fonts/MuseoSans500-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans100-Regular;
+    font-weight: 'bold';
+src: url("fonts/MuseoSans500-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans700-Italic;
+src: url("fonts/MuseoSans700-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans700-Regular;
+src: url("fonts/MuseoSans700-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans900-Italic;
+src: url("fonts/MuseoSans900-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSans900-Regular;
+src: url("fonts/MuseoSans900-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: MuseoSansCnd100-Italic;
+src: url("fonts/MuseoSansCnd100-italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd100-Regular;
+src: url("fonts/MuseoSansCnd100-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd300-Italic;
+src: url("fonts/MuseoSansCnd300-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd300-Regular;
+src: url("fonts/MuseoSansCnd300-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd500-Italic;
+src: url("fonts/MuseoSansCnd500-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd500-Regular;
+src: url("fonts/MuseoSansCnd500-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd700-Italic;
+src: url("fonts/MuseoSansCnd700-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd700-Regular;
+src: url("fonts/MuseoSansCnd700-Regular.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd900-Italic;
+src: url("fonts/MuseoSansCnd900-Italic.otf") format("opentype");
+}
+@font-face {
+font-family: MuseoSansCnd900-Regular;
+src: url("fonts/MuseoSansCnd900-Regular.otf") format("opentype");
+}

@@ -22,8 +22,9 @@
         </xpath>
     </template>
     <!-- load bird theme css and js -->
-    <template id="website.theme_bird" name="BIRD" inherit_id="website.theme" active="False" customize_show="True">
+    <template id="website.theme_bird" name="BIRD" inherit_id="website.theme" active="True" customize_show="True">
         <xpath expr="//link[@id='bootstrap_css']" position="replace">
+            <link rel='stylesheet' href='/bird_config/static/src/css/bird_custom_fonts.css' t-ignore="true"/>
             <link rel='stylesheet' href='/bird_config/static/src/css/bootstrap_bird/css/bootstrap.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/bird_config/static/src/css/bootstrap_bird/css/bootstrap-theme.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/bird_config/static/src/css/bird.css' t-ignore="true"/>
