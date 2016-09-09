@@ -54,8 +54,8 @@ auf die Größe des Iframes und nicht auf die darüberliegende Seitengröße.
 
 body {
     color: black;
-    font-family: "MuseoSans100-Regular",Helvetica,Arial,sans-serif;
-    font-size: 1.5em;
+    /*font-family: "MuseoSans100-Regular",Helvetica,Arial,sans-serif;*/
+    /*font-size: 1.5em;*/
 }
 /* BACKGROUND SNIPPED COLORS */
 .oe_blue { background-color: #036ba2 !important; }
@@ -70,6 +70,7 @@ body {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
 }
+/*
 h1 {
     font-family: Museo300-Regular;
     font-size: 50px;
@@ -93,7 +94,7 @@ h5 {
     font-family: Museo300-Regular;
     font-size: 20px;
 }
-
+*/
 
 /* Bold Text */
 b, strong {
