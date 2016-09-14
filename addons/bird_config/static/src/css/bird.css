@@ -389,3 +389,9 @@ header a.navbar-brand img {
         margin-top: initial !important;
     }
 }
+@media (max-width: 992px) { /* WICHTIG für TABLET Version wenn jemand beim snippet die Größe verzieht dann wird eine
+                                fixe Height reingeschrieben und damit ist der block kaputt am tablet */
+    section {
+        height: auto !important;
+    }
+}
