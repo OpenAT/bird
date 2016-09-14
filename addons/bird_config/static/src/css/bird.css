@@ -143,9 +143,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 /* DISABLE DEMO MENÜ BUTTON */
+/*
 #top_menu > li:nth-child(7) > a {
     display:none;
 }
+*/
 /*
 .navbar-default {
     z-index:9999;
@@ -369,4 +371,10 @@ header a.navbar-brand img {
 /* BLOG CSS */
 #main_column > div:nth-child(n) > div > div.col-md-9 > span > img {
     display: none;
+}
+
+@media (min-width: 768px) {
+    .navbar-default .navbar-nav>li>a {
+            padding-top: initial !important;
+    }
 }
