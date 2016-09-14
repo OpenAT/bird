@@ -54,10 +54,14 @@ auf die Größe des Iframes und nicht auf die darüberliegende Seitengröße.
 
 body {
     color: black;
+    /*
     font-family: "MuseoSans",Helvetica,Arial,sans-serif;
+    */
     /*font-size: 1.5em;*/
+    /*
     font-weight: normal;
     font-style: normal;
+    */
 }
 /* BACKGROUND SNIPPED COLORS */
 .oe_blue { background-color: #036ba2 !important; }
@@ -99,9 +103,11 @@ h5 {
 */
 
 /* Bold Text */
+/*
 b, strong {
     font-weight: normal;
 }
+*/
 
 /* Modal Box Trigger */
 .btn-link.information-modal-box-trigger:hover {

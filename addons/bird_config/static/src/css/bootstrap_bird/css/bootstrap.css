@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=7c80b933ac2bebd48f3d4678935e9829)
- * Config saved to config.json and https://gist.github.com/7c80b933ac2bebd48f3d4678935e9829
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=245c8cb0813a81de10bf0eedf636721f)
+ * Config saved to config.json and https://gist.github.com/245c8cb0813a81de10bf0eedf636721f
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -1088,7 +1088,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "MuseoSans100-Regular", Helvetica, Arial, sans-serif;
+  font-family: "MuseoSans", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.42857143;
   color: #333333;
@@ -5996,7 +5996,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "MuseoSans100-Regular", Helvetica, Arial, sans-serif;
+  font-family: "MuseoSans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6114,7 +6114,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "MuseoSans100-Regular", Helvetica, Arial, sans-serif;
+  font-family: "MuseoSans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
