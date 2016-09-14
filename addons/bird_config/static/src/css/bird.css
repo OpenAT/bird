@@ -375,8 +375,11 @@ header a.navbar-brand img {
     display: none;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .navbar-default .navbar-nav>li>a {
             padding-top: initial !important;
+    }
+    .navbar.navbar-static-top ul.nav > li.divider {
+        margin-top: initial !important;
     }
 }
