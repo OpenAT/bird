@@ -246,9 +246,12 @@ myCarousel_1469701223895 {
 
 /* jquery-validate control-icons (green arrow or red cross) */
 #wsd_checkout_form .form-control-feedback {
-    top: 24px !important;
+    top: 30px !important;
 }
 
+#wsd_checkout_form .billing-fields .form-control-feedback {
+    right: 15px;
+}
 /* Main Navigation: Navbar */
 .navbar.navbar-static-top ul.nav > li.divider {
     height: 60px;
@@ -371,6 +374,11 @@ header a.navbar-brand img {
     max-width: 1170px;
     margin: auto;
 }
+
+.has-feedback .form-control {
+    padding-right: 2px;
+}
+
 /*
 .ppt_donate p {
     mix-blend-mode: overlay lighten;
