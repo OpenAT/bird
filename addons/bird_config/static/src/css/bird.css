@@ -282,7 +282,7 @@ header a.navbar-brand img {
 /* Media Selektor Tablet Special 3er Block Verhalten iPads (portrait) */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
   main .container img {
-    max-width: 50%;
+    max-width: 50% !important;
     float: right;
   }
 }
