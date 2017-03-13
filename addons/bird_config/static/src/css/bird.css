@@ -402,6 +402,12 @@ header a.navbar-brand img {
 #main_column > div:nth-child(n) > div > div.col-md-9 > span > img {
     display: none;
 }
+address.mb0 {
+    display: none;
+}
+#title > div.blog_title > div:nth-child(4) > span:nth-child(1) > img {
+    display: none !important;
+}
 
 @media (max-width: 768px) {
     .navbar-default .navbar-nav>li>a {
