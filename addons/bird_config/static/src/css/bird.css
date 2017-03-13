@@ -279,6 +279,20 @@ header a.navbar-brand img {
     #price_donate { font-size: 0.7em !important; }
 }
 
+/* Media Selektor Tablet Special 3er Block Verhalten iPads (portrait) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  main .container img {
+    max-width: 50%;
+    float: right;
+  }
+}
+/**********
+iPad 3 Pixel Ratio
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
 /* checkoutform
 TODO Check ob diese Settings auch über BOOTSTRAP einstellbar sind
 */
