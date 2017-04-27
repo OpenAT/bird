@@ -11,6 +11,8 @@
                 <li class="dropdown-submenu">
                     <a tabindex="-2" href="#">Uniform Color</a>
                     <ul class="dropdown-menu">
+                        <li data-value='oe_grey'><a>Bird Grau</a></li>
+                        <li data-value='oe_grey_light'><a>Bird Grau Hell</a></li>
                         <li data-value='oe_green'><a>Bird Grün</a></li>
                         <li data-value='oe_green_light'><a>Bird Grün Hell</a></li>
                         <li data-value='oe_blue'><a>Bird Blau</a></li>

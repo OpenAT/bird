@@ -64,6 +64,8 @@ body {
     */
 }
 /* BACKGROUND SNIPPED COLORS */
+.oe_grey { background-color: #818079 !important; }
+.oe_grey_light { background-color: rgba(129, 128, 121, 0.33) !important; }
 .oe_blue { background-color: #036ba2 !important; }
 .oe_blue_light { background-color: rgba(3, 107, 162, 0.33) !important; }
 .oe_green { background-color: #0f921a !important; }
@@ -339,9 +341,26 @@ footer {
     /*color: #0f921a !important;*/
     color: white !important;
 }
+/* Opensource logo rechts unten begin */
+#wrapwrap > footer > div.container.mt16.mb8 > div.pull-right {
+    color: #0f921a;
+}
+
+#wrapwrap > footer > div.container.mt16.mb8 > div.pull-right > a.label.label-danger {
+    background-color: inherit;
+    color: #0f921a;
+    text-decoration: none;
+}
+
+#wrapwrap > footer > div.container.mt16.mb8 > div.pull-right a {
+    color: #0f921a;
+    text-decoration: none;
+}
+/* Opensource logo rechts unten end */
 
 footer a {
-    color: #0f921a;
+    color: white;
+    text-decoration: underline;
 }
 footer a:hover, a:focus {
     color: white;
