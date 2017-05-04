@@ -346,6 +346,9 @@ footer {
     color: #0f921a;
 }
 
+#wrapwrap > footer > div.container.mt16.mb8 > div.text-muted {
+    color: white !important;
+}
 #wrapwrap > footer > div.container.mt16.mb8 > div.pull-right > a.label.label-danger {
     background-color: inherit;
     color: #0f921a;
@@ -419,6 +422,9 @@ header a.navbar-brand img {
 */
 /* BLOG CSS */
 #main_column > div:nth-child(n) > div > div.col-md-9 > span > img {
+    display: none;
+}
+#main_column > div:nth-child(n) > div > div.col-md-9 > div > div {
     display: none;
 }
 address.mb0 {
