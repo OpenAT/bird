@@ -450,8 +450,10 @@ address.mb0 {
 }
 /* BLOG Images and Capions */
 /* Global */
-section div.container div.row div.col-md-6.mt16 img em {
+section div.container div.row div.col-md-6.mt16 em {
     text-align: -webkit-center;
+    width: 450px;
+    margin: auto;
 }
 @media only screen and (min-device-width: 768px) {
     section div.container div.row div.col-md-6.mt16 {
@@ -465,5 +467,12 @@ section div.container div.row div.col-md-6.mt16 img em {
         width: 100%;
         min-height: 65vh !important;
         /*height: 100vh !important;*/
+    /* test responsive
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    */
     }
 }
