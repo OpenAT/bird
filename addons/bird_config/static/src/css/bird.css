@@ -448,8 +448,22 @@ address.mb0 {
         height: auto !important;
     }
 }
+/* BLOG Images and Capions */
+/* Global */
+section div.container div.row div.col-md-6.mt16 img em {
+    text-align: -webkit-center;
+}
 @media only screen and (min-device-width: 768px) {
     section div.container div.row div.col-md-6.mt16 {
         display: grid;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #wrap.js_blog.website_blog .cover {
+        margin-bottom: 20px !important;
+        width: 100%;
+        min-height: 65vh !important;
+        /*height: 100vh !important;*/
     }
 }
