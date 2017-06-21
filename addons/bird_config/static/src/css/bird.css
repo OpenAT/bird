@@ -175,9 +175,11 @@ header {
   position: relative;
   /*top: -70px;*/
   margin-top: -70px !important;
+
 }
 #myCarousel_1495089974912 {
-    margin-top: -70px !important;
+    /*FIX for FIREFOX, it ignores margin-top --> use top instead of margin-top or use display: inline-block; and width: 100%;*/
+    top: -70px !important;
 }
 #myCarousel_1469701223895 {
       margin-top: -70px !important;
