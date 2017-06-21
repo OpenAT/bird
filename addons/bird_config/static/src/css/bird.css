@@ -500,10 +500,13 @@ section div.container div.row div.col-md-6.mt16 em {
     display: none;
 }
 /* OPC Überschreiben überschrift "Spendenhöhe" */
-.ppt_opc #wsd_checkout_form > div > h3 > span {
+/* Breich Mitgliedschaften */
+/*
+body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3 > span {
   display: none;
 }
-.ppt_opc #wsd_checkout_form > div > h3:after {
+body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
   content: 'Beitragshöhe';
     font-size: 35px;
 }
+*/
