@@ -21,6 +21,7 @@
                         <li data-value='oe_brown_ligth'><a>Purple</a></li>
                         <li data-value='oe_brown'><a>Braun</a></li>
                         <li data-value='oe_black_light'><a>Schwarz Transparent</a></li>
+                        <li data-value='oe_white'><a>Weiss</a></li>
                     </ul>
                 </li>
                 <li class="dropdown-submenu">

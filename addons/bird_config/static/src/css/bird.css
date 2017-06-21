@@ -74,9 +74,15 @@ body {
 .oe_brown { background-color: #553000 !important; }
 .oe_brown_light { background-color: rgba(162, 92, 3, 0.33) !important; }
 .oe_black_light { background-color: rgba(0, 0, 0, 0.3); !important}
+.oe_white { background-color: #ffffff !important; }
+
 /* Headers */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
+}
+#product_desc_short_top h1 {
+    margin-top: 25px;
+    margin-bottom: 12.5px;
 }
 /*
 h1 {
