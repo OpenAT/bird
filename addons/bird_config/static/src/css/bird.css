@@ -476,3 +476,34 @@ section div.container div.row div.col-md-6.mt16 em {
     */
     }
 }
+[data-name='frst-submit-button'] {
+    max-width: 100% ;
+}
+[data-name='ogonedadi-submit-button'] {
+    max-width: 100%;
+}
+
+/* One Page Checkout */
+.ppt_opc h3.amount_title {
+    text-align: center;
+}
+
+.ppt_opc #website_sale_donate .oe_price_h4 {
+    width: 20%;
+    margin: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+.ppt_opc .row.ppt_opc-small_cart {
+    display: none;
+}
+/* OPC Überschreiben überschrift "Spendenhöhe" */
+.ppt_opc #wsd_checkout_form > div > h3 > span {
+  display: none;
+}
+.ppt_opc #wsd_checkout_form > div > h3:after {
+  content: 'Beitragshöhe';
+    font-size: 35px;
+}
