@@ -522,3 +522,14 @@ body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
   content: 'Jährliche Beitragshöhe';
     font-size: 35px;
 }
+/* Login Buttons */
+#top_menu > li.divider {
+  display: none;
+}
+#top_menu > li:last-child {
+  display: none;
+}
+#wsd_checkout_steps_nav > div > div > a.btn.btn-primary.navbar-btn {
+  display: none;
+}
+/* Login buttons end */
