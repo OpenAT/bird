@@ -28,7 +28,7 @@
             <link rel='stylesheet' href='/bird_config/static/src/css/bootstrap_bird/css/bootstrap.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/bird_config/static/src/css/bootstrap_bird/css/bootstrap-theme.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/bird_config/static/src/css/bird.css' t-ignore="true"/>
-            <script type="text/javascript" src="/bird_config/static/src/js/textreplace.js"/>
+<!--            <script type="text/javascript" src="/bird_config/static/src/js/textreplace.js"/>-->
         </xpath>
     </template>
     <!-- Load custom  JS for the website -->
