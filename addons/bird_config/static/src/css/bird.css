@@ -536,8 +536,7 @@ body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
 }
 /* Login buttons end */
 /* Shopping Cart Mini Icon */
-  .fa-shopping-cart:before {
+/*  .fa-shopping-cart:before {*/
     /*content: "\f16b";*/
-    content: "\f004";
-
-  }
+/*    content: "\f004";
+  }*/
