@@ -28,9 +28,17 @@
             <link rel='stylesheet' href='/bird_config/static/src/css/bootstrap_bird/css/bootstrap.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/bird_config/static/src/css/bootstrap_bird/css/bootstrap-theme.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/bird_config/static/src/css/bird.css' t-ignore="true"/>
+            <script type="text/javascript" src="/bird_config/static/src/js/textreplace.js"/>
         </xpath>
     </template>
-
+    <!-- Load custom  JS for the website -->
+<!--
+    <template id="bird_assets_frontend" inherit_id="website_forum.assets_frontend" name="bird JS">
+        <xpath expr='//script[@src="/website_forum/static/src/js/website_forum.js"]' position="after">
+            <script type="text/javascript" src="/care_config/static/src/js/textreplace.js"/>
+        </xpath>
+    </template>
+-->
     <!-- GOOGLE WEBMASTER TOOLS -->
     <!--
     <template id="google_webmastertools_site_verification" inherit_id="website.layout" name="Google Webmastertools site verification">
