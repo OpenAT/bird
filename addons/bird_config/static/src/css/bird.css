@@ -541,7 +541,51 @@ body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
   }*/
 [data-name='frst-submit-button'] {
   max-width: initial !important;
+        text-align: center;
+      margin:auto;
+        display: block;
 }
 [data-name='ogonedadi-submit-button'] {
   max-width: initial !important;
+}
+[data-name='ogonedadi-submit-button'] {
+    max-width: initial !important;
+    min-width: 150px !important;
+    margin-top: 142px !important;
+    display: block;
+  margin:auto;
+    text-align: center;
+}
+    body #website_sale_donate {
+        -webkit-animation: fadeIn 2s;
+    }
+    @-webkit-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    body .oe_website_sale {
+        -webkit-animation: fadeIn 2s;
+    }
+    @-webkit-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    .oe_website_sale .oe_cart #right_column {
+        display: inline-block;
+    }
+    @media (max-width: 740px) {
+        #right_column {
+            display: inline-block;
+        }
+    }
+    .wsd_cart_page {
+        margin-bottom: 15px;
+    }
+    .wsd_checkout_page_content {
+        margin-bottom: 15px;
+    }
+#payment_method .tab-content {
+    border-left: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    border-right: solid 1px #ddd;
 }
