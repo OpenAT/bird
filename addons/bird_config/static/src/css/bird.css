@@ -588,4 +588,12 @@ body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
     border-left: solid 1px #ddd;
     border-bottom: solid 1px #ddd;
     border-right: solid 1px #ddd;
+    height: auto !important;
+    padding-bottom: inherit;
 }
+    @media (max-width: 614px) {
+        #wrap > div.container.oe_website_sale > div.row.wsd_payment_page_content > div.col-sm-3.col-sm-offset-1 > div {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    }
