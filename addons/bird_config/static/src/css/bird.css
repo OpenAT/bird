@@ -226,6 +226,9 @@ header {
 .nav>li>a:hover {
     background-color: #3f3f3f;
 }
+#blog_right_column .nav>li>a:hover {
+    background-color: #0f921a;
+}
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus {
     background-color: #fff;
@@ -380,7 +383,9 @@ footer a {
     text-decoration: underline;
 }
 footer a:hover, a:focus {
-    color: white;
+    /*color: #0f921a;*/
+    mix-blend-mode: difference;
+    color: black;
 }
 
 footer > div.container.mt16.mb8 > div.text-muted {
@@ -446,6 +451,9 @@ address.mb0 {
 }
 #title > div.blog_title > div:nth-child(4) > span:nth-child(1) > img {
     display: none !important;
+}
+.blog_title > div:first-of-type {
+    display: none;
 }
 
 @media (max-width: 768px) {
