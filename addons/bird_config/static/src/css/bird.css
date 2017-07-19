@@ -527,13 +527,17 @@ section div.container div.row div.col-md-6.mt16 em {
 /* OPC Überschreiben überschrift "Spendenhöhe" */
 /* Breich Mitgliedschaften */
 /* better Solution via JS and replace text, soon replaced by Odoo o8r68 Backend Solution */
+/* Update of website_sale_donate und website_sale_donate.checkoutbox noupdate */
+/*
 body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3 > span {
   display: none;
 }
+
 body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
   content: 'Jährliche Beitragshöhe';
     font-size: 35px;
 }
+*/
 /* Login Buttons */
 #top_menu > li.divider {
   display: none;
