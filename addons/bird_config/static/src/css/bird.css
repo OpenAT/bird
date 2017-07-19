@@ -384,7 +384,10 @@ footer a {
 }
 footer a:hover, a:focus {
     /*color: #0f921a;*/
-    mix-blend-mode: difference;
+    /*mix-blend-mode: difference;*/
+    color: white;
+}
+main a:hover, a:focus {
     color: black;
 }
 
