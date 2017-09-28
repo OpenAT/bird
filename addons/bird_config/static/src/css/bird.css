@@ -612,3 +612,6 @@ body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
             margin-top: 20px;
         }
     }
+#payment_method .do_not_send_payment_forms {
+    display: none;
+}
