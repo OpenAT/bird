@@ -617,3 +617,7 @@ body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
 #payment_method .do_not_send_payment_forms {
     display: none;
 }
+
+body[data-rootcatid="4"] .webshop_download_file {
+    display: none;
+}
