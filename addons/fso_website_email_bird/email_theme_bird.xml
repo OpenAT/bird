@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    
+    <!-- INHERIT AND EXTEND theme_default_snippets -->
+    <template id="email_theme_bird_snippets_overrides" inherit_id="fso_website_email.theme_default_snippets" name="Email Theme Bird Snippet overrides">
+        
+        <!--&lt;!&ndash; Additional Button Options &ndash;&gt;-->
+        <!--<xpath expr="//div[@data-snippet-option-id='drop_in_button_style']//ul/li[1]" position="after">-->
+            <!--<li data-value='bird_di_button_orange'><a>Orange</a></li>-->
+            <!--<li data-value='bird_di_button_blue'><a>Blue</a></li>-->
+            <!--<li data-value='bird_di_button_pink'><a>Pink</a></li>-->
+        <!--</xpath>-->
+        <!---->
+        <!--&lt;!&ndash; Additional Foreground styles &ndash;&gt;-->
+        <xpath expr="//div[@data-snippet-option-id='dadi_sb_fg_color']//ul/li[1]" position="after">
+            <li data-value='bird_sb_fg_blue'><a>Blue</a></li>
+            <li data-value='bird_sb_fg_green'><a>Green</a></li>
+        </xpath>
+        <!-- dd -->
+        <!--&lt;!&ndash; Additional Background styles &ndash;&gt;-->
+        <xpath expr="//div[@data-snippet-option-id='dadi_sb_bg_color']//ul/li[1]" position="after">
+            <li data-value='bird_sb_bg_blue'><a>Blue</a></li>-
+            <li data-value='bird_sb_bg_green'><a>Green</a></li>
+        </xpath>
+        
+    </template>
+    
+    <!-- THEME 'bird' SNIPPETS -->
+    <!-- These snippets will be loaded in the template 'email_theme_bird_assets_editmode' by java script (see below) -->
+    <template id="email_theme_bird_snippets">
+        <!-- Simply Load theme_default_snippets :) -->
+        <t t-call="fso_website_email.theme_default_snippets"/>
+    </template>
+    
+    
+    <!-- THEME 'bird' ASSETS -->
+    <!-- ATTENTION: At least one local css <link> or inline <style> tag  (even if just empty) MUST exist in an assets template -->
+    <template id="email_theme_bird_assets">
+        <link href='/fso_website_email_bird/static/src/css/email_theme_bird.css' rel='stylesheet' type='text/css' t-ignore="true"/>
+    </template>
+    
+    <!-- THEME 'bird' ASSETS EDITMODE -->
+    <template id="email_theme_bird_assets_editmode">
+        
+        <!-- Snippets template URL -->
+        <script type="text/javascript">
+            //<![CDATA[
+                (function () {
+                    'use strict';
+                    var website = openerp.website;
+                    website.if_dom_contains('#email_designer', function () {
+                        website.snippet.BuildingBlock.include({
+                            _get_snippet_url: function () {
+                                return '/fso/email/snippets?snippets_template=fso_website_email_bird.email_theme_bird_snippets';
+                            }
+                        });
+                    });
+                })();
+            //]]>
+        </script>
+        
+        <!-- Override CKEditor Settings -->
+        <script type="text/javascript">
+            //<![CDATA[
+            (function () {
+                'use strict';
+                // Overwrite class method of website/static/src/js/website.editor.js@839
+                // to append/set/override CKEDITOR.config for wrapwrap editor
+                openerp.website.RTE = openerp.website.RTE.extend({
+                    _config: function () {
+                        // Run the original method to modify it's result
+                        var config =  this._super();
+                        
+                        // Set custom toolbar
+                        // https://docs.ckeditor.com/ckeditor4/latest/guide/dev_toolbar.html
+                        config.toolbar = [{
+                            name: 'basicstyles', items: [
+                                "Bold", "Italic", "Underline", "Strike", "Subscript",
+                                "Superscript", "TextColor", "BGColor", "RemoveFormat"
+                            ]
+                        }, {
+                            name: 'span', items: [
+                                "Link", "Blockquote", "BulletedList",
+                                "NumberedList", "Indent", "Outdent"
+                            ]
+                        }, {
+                            name: 'justify', items: [
+                                "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock"
+                            ]
+                        }, {
+                            name: 'special', items: [
+                                "Image"
+                            ]
+                        }, {
+                            name: 'styles', items: [
+                                "Styles"
+                            ]
+                        }
+                        ];
+                        
+                        // Add Custom font and font background colors
+                        config.colorButton_colors = 'ffffff,555555,000000,cccccc,b32986,f49800,407cca,57c940,c9c940,c94740';
+                        // config.colorButton_colorsPerRow = 4;
+                        // config.colorButton_enableAutomatic = true;
+                        
+                        // return the config
+                        return config;
+                    }
+                });
+            })();
+            //]]>
+        </script>
+        
+        <style>
+            /* fix sticky header space and add bottom space in edit mode */
+            #wrapwrap {
+                margin-top: 42px;
+                margin-bottom: 600px;
+            }
+        </style>
+    </template>
+
+    
+    <!-- BIRD HEADER CONTENT -->
+    <template id="email_theme_bird_header" name="BIRD Header">
+        <!--<div class="ckediting_disabled snippet_block snippet_block_text_image_left">-->
+        <div class="dadi_sb_bg_full ckediting_disabled">
+            <table cellpadding="0" cellspacing="0" class="centeringTable">
+                <tbody>
+                    <tr>
+                        <td align="center" valign="top">
+                            <table border="0" cellpadding="0" cellspacing="0" class="flexibleContainer">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" class="flexibleContainerCell" valign="top">
+                                            <table border="0" cellpadding="0" cellspacing="0" class="nestedContainer">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" class="nestedContainerCell" valign="top">
+                                                            <table border="0" cellpadding="0" cellspacing="0" class="contentTable">
+                                                                <tbody class="ckediting_disabled">
+                                                                    <tr class="ckediting_disabled">
+                                                                        <td class="textContent ckediting_disabled">
+                                                                            
+                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft ckediting_disabled">
+                                                                                <tbody class="ckediting_disabled">
+                                                                                    <tr class="ckediting_disabled">
+                                                                                        <td align="left" class="imageContent ckediting_disabled" valign="top">
+                                                                                            
+                                                                                            <img class="bird_title_image flexibleImage" src="/fso_website_email_bird/static/src/images/logo121x90.png"/>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="bird_title">Ihr Beitrag lässt uns fliegen!</div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            
+                                                                            <table align="right" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerRight ckediting_disabled">
+                                                                                <tbody class="ckediting_disabled">
+                                                                                    <tr class="ckediting_disabled">
+                                                                                        <td class="textContent ckediting_disabled" valign="top">
+                                                                                            
+                                                                                            <p style="text-align: right; display: none;">
+                                                                                                <b>BirdLife Österreich - Gesellschaft für Vogelkunde</b><br/>
+                                                                                                A-1070 Wien, Museumsplatz 1/10/8<br/>
+                                                                                                Tel.: +43 (0) 1 523 465 1<br/>
+                                                                                                <a href="mailto:office@birdlife.at">office@birdlife.at</a> . <a href="https://www.birdife.at" target="_blank">www.birdlife.at</a>
+                                                                                            </p>
+                                                                                            
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+    
+    
+    <!-- BIRD Footer CONTENT -->
+    <template id="email_theme_bird_footer" name="BIRD Footer">
+        
+        <!-- Abmeldelink und Social Media -->
+        <div class="bird_footer_social ckediting_disabled">
+            <table class="centeringTable" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="center" valign="top">
+                        <table class="flexibleContainer" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="flexibleContainerCell" align="center" valign="top">
+                                    <table class="nestedContainer" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="nestedContainerCell" align="center" valign="top">
+                                                    <table class="contentTable" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td class="textContent ckediting_disabled" align="center" valign="top" contenteditable="false">
+                                                                
+                                                                <!-- content left -->
+                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
+                                                                                <p style="text-align: left;">
+                                                                                    Sie können sich jederzeit abmelden.<br/>
+                                                                                    <a href="/unsubscribe">Hier können Sie sich abmelden</a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                
+                                                                <!-- content right -->
+                                                                <table align="right" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerRight">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
+                                                                                <p style="text-align: right;">
+                                                                                    <a href="https://www.facebook.com/BirdLifeOesterreich/" target="_blank"><img src="/fso_website_email_bird/static/src/images/Facebook-hell.png" alt="Facebook" title="Facebook"/></a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+        
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Info und Addresse -->
+        <div class="bird_footer_info dadi_sb_bg_full ckediting_disabled">
+            <table class="centeringTable" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="center" valign="top">
+                        <table class="flexibleContainer" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="flexibleContainerCell" align="center" valign="top">
+                                    <table class="nestedContainer" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="nestedContainerCell" align="center" valign="top">
+                                                    <table class="contentTable" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td class="textContent ckediting_disabled" align="center" valign="top" contenteditable="false">
+                                                                
+                                                                <!-- content left -->
+                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
+                                                                                <p style="text-align: left;">
+                                                                                    BirdLife Österreich - Gesellschaft für Vogelkunde. Diese E-Mail wurde an
+                                                                                    <span class="ckediting_disabled drop_in drop_in_print_field pf_email">
+                                                                                        <span class="pf_email" data-fs-email-placeholder="%Email%" title="%Email%">
+                                                                                            maximilian.mustermann@meinedomain.com
+                                                                                        </span>
+                                                                                    </span>
+                                                                                    gesandt. Sie erhalten dieses E-Mail, weil Sie BirdLife Österreich - Gesellschaft für Vogelkunde mit Spenden unterstützen oder
+                                                                                    weil Sie sich für unseren Newsletter angemeldet haben.
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                
+                                                                <!-- content right -->
+                                                                <table align="right" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerRight">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
+                                                                                <p style="text-align: right;">
+                                                                                    <strong>Unsere Anschrift lautet:</strong><br/>
+                                                                                    BirdLife Österreich - Gesellschaft für Vogelkunde<br/>
+                                                                                    A-1070 Wien, Museumsplatz 1/10/8<br/>
+                                                                                    Tel.: +43 (0) 1 523 465 1<br/>
+                                                                                    E-Mail: <a href="mailto:office@birdlife.at" target="_blank">office@birdlife.at</a><br/>
+                                                                                    Website: <a href="https://www.birdlife.at/" target="_blank">www.birdlife.at</a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+        
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    </template>
+    
+
+    <!-- BIRD THEME -->
+    <template id="email_theme_bird"
+              name="bird Theme">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+        <html t-att-lang="lang and lang.replace('_', '-')"
+              t-att-data-website-id="website and website.id or None"
+              t-att-data-editable="'1' if editable else None"
+              t-att-data-translatable="'1' if translatable else None"
+              t-att-data-view-xmlid="xmlid if editable else None"
+              t-att-data-main-object="repr(main_object) if editable else None"
+              t-att-data-oe-company-name="res_company.name if editable else None"
+              class="ckediting_disabled">
+
+            <!-- TEMPLATE SETTINGS -->
+            <!-- ================= -->
+            <t t-set="load_default_theme" t-value="True"/>
+            <!-- ================= -->
+
+            <head>
+                <!-- COMMON CSS-ASSETS AND <head> TAGS -->
+                <t t-call="fso_website_email.theme_head_common"/>
+                
+                <!-- THEME bird CSS-ASSETS IN EDIT MODE ONLY -->
+                <t t-if="email_editor_mode">
+                    <t t-call-assets="fso_website_email_bird.email_theme_bird_assets_editmode" t-js="false"/>
+                </t>
+                
+                <!-- THEME bird CSS-ASSETS -->
+                <t t-call-assets="fso_website_email_bird.email_theme_bird_assets" t-js="false"/>
+                
+                <meta name="viewport" content="width=device-width"/>
+            </head>
+
+
+            <body class="ckediting_disabled">
+                <!-- WRAP COMMON ASSETS AND BODY TAGS AROUND THEME 'bird' -->
+                <t t-call="fso_website_email.theme_body_common">
+
+                    <!-- ============ -->
+                    <!-- THEME 'bird' -->
+                    <!-- ============ -->
+                    <center>
+                        <table id="bodyTable" class="ckediting_disabled" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+
+                            <!-- HEADER -->
+                            <!--<tr>-->
+                                <!--<td id='open_in_browser' class="headerCell ckediting_disabled" align="center">-->
+                                    <!--Wenn diese Nachricht nicht richtig angezeigt wird, verwenden Sie bitte die-->
+                                    <!--<![CDATA[-->
+                                    <!--<a id="view-email-in-browser"-->
+                                       <!--href="%open_browser%" target="_blank">-->
+                                         <!--Online-Version-->
+                                    <!--</a>-->
+                                    <!--]]>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                            
+                            <!-- BIRD HEADER -->
+                            <tr>
+                                <td id='bird_header' class="headerCell ckediting_disabled" align="center">
+    
+                                    <t t-call="fso_website_email_bird.email_theme_bird_header"/>
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- MAIN -->
+                            <tr>
+                                <!-- bodyCell width: 100% padding: 0 left and right  -->
+                                <td id="bodyCell" class="ckediting_disabled" align="center" valign="top">
+                                    
+                                    <!-- emailBody width: 600 px padding: 0  margin: 0 -->
+                                    <table id="emailBody" class="ckediting_disabled" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td class="ckediting_disabled" align="center" valign="top">
+
+                                                <!-- CONTENT ('html_body' field of email.template) -->
+                                                <t t-call="fso_website_email.content"/>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- FOOTER -->
+                            <tr>
+                                <td id='bird_footer' align="center" class="footerCell ckediting_disabled">
+                                    
+                                    <t t-call="fso_website_email_bird.email_theme_bird_footer"/>
+                                    
+                                </td>
+                            </tr>
+
+                        </table>
+                    </center>
+
+                </t>
+                
+                <!-- THEME bird JAVA SCRIPT ASSETS IN EDIT MODE ONLY -->
+                <t t-if="email_editor_mode">
+                    <t t-call-assets="fso_website_email_bird.email_theme_bird_assets_editmode" t-css="false"/>
+                </t>
+                
+                <!-- THEME bird JAVA SCRIPT ASSETS -->
+                <t t-call-assets="fso_website_email_bird.email_theme_bird_assets" t-css="false"/>
+            </body>
+
+        </html>
+    </template>
+
+    <!-- Enable the boolean field 'fso_email_template' for this theme to show it at the 'fso/email/select' page -->
+    <record id="fso_website_email_bird.email_theme_bird" model="ir.ui.view">
+        <field name="fso_email_template" eval="True"/>
+    </record>
+
+</data>
+</openerp>
