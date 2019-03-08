@@ -51,7 +51,7 @@ html body #wrapwrap {
     padding-bottom: 0;
 }
 #bird_header .contentTable {
-    background-color: #4c4c4c;
+    background-color: white;
     color: #eeeeee;
     font-size: 11px;
     line-height:13px;
@@ -59,16 +59,26 @@ html body #wrapwrap {
 #bird_header .contentTable a {
     color: #bbbbbb;
 }
-#bird_header table.flexibleContainerLeft .imageContent {
+#bird_header tr.ckediting_disabled.divider {
+    border-bottom: 1px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: #4c4c4c;
+    border-style: solid;
+}
+#bird_header table.flexibleContainerCenter .imageContent {
     padding: 6px 20px 0 20px;
 }
-#bird_header table.flexibleContainerLeft .imageContent img {
-    width: 80px;
+
+#bird_header table.flexibleContainerCenter .imageContent img {
+    width: 60%;
 }
 /*#bird_header table.flexibleContainerLeft .imageContent,*/
-#bird_header table.flexibleContainerRight .textContent {
+/*#bird_header table.flexibleContainerRight .textContent {
     padding: 15px 20px;
-}
+}*/
+
 @media only screen and (max-width: 480px) {
   #bird_header {
     display: none!important;
@@ -96,15 +106,19 @@ html body #wrapwrap {
 
 #bird_footer .bird_footer_social .flexibleContainer {
     border-top: 1px solid #dddddd;
-    background-color: #4c4c4c;
+    background-color: #0070ac;
 }
 #bird_footer .bird_footer_social .contentTable .textContent {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
+#bird_footer .bird_footer_social img {
+    width: 32px;
+}
 #bird_footer .bird_footer_info {
     padding-top: 0px;
+}
+#bird_footer .bird_footer_info > table > tbody > tr > td > table > tbody > tr > td > table {
     background-color: #0070ac;
 }
 #bird_footer .bird_footer_info .flexibleContainerLeft .textContent {

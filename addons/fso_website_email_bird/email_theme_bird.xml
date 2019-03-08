@@ -142,39 +142,15 @@
                                                                 <tbody class="ckediting_disabled">
                                                                     <tr class="ckediting_disabled">
                                                                         <td class="textContent ckediting_disabled">
-                                                                            
-                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft ckediting_disabled">
+                                                                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerCenter ckediting_disabled">
                                                                                 <tbody class="ckediting_disabled">
-                                                                                    <tr class="ckediting_disabled">
-                                                                                        <td align="left" class="imageContent ckediting_disabled" valign="top">
-                                                                                            
-                                                                                            <img class="bird_title_image flexibleImage" src="/fso_website_email_bird/static/src/images/logo121x90.png"/>
-                                                                                            
-                                                                                        </td>
-                                                                                        <td>
-                                                                                            <div class="bird_title">Ihr Beitrag lässt uns fliegen!</div>
+                                                                                    <tr class="ckediting_disabled divider">
+                                                                                        <td align="center" class="imageContent ckediting_disabled" valign="top">
+                                                                                            <img class="bird_title_image flexibleImage" src="/fso_website_email_bird/static/src/images/BirdLifeLogo_Oesterreich_Logo_und_Claim_bunt.png"/>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>
-                                                                            
-                                                                            <table align="right" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerRight ckediting_disabled">
-                                                                                <tbody class="ckediting_disabled">
-                                                                                    <tr class="ckediting_disabled">
-                                                                                        <td class="textContent ckediting_disabled" valign="top">
-                                                                                            
-                                                                                            <p style="text-align: right; display: none;">
-                                                                                                <b>BirdLife Österreich - Gesellschaft für Vogelkunde</b><br/>
-                                                                                                A-1070 Wien, Museumsplatz 1/10/8<br/>
-                                                                                                Tel.: +43 (0) 1 523 465 1<br/>
-                                                                                                <a href="mailto:office@birdlife.at">office@birdlife.at</a> . <a href="https://www.birdife.at" target="_blank">www.birdlife.at</a>
-                                                                                            </p>
-                                                                                            
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                            
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -214,12 +190,12 @@
                                                         <tr>
                                                             <td class="textContent ckediting_disabled" align="center" valign="top" contenteditable="false">
                                                                 
-                                                                <!-- content left -->
-                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft">
+                                                                <!-- content right -->
+                                                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerCenter">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td align="center" class="textContent ckediting_enabled" valign="top">
-                                                                                <p style="text-align: left;">
+                                                                                <p style="text-align: center;">
                                                                                     Sie können sich jederzeit abmelden.<br/>
                                                                                     <a href="/unsubscribe">Hier können Sie sich abmelden</a>
                                                                                 </p>
@@ -227,20 +203,6 @@
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
-                                                                
-                                                                <!-- content right -->
-                                                                <table align="right" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerRight">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
-                                                                                <p style="text-align: right;">
-                                                                                    <a href="https://www.facebook.com/BirdLifeOesterreich/" target="_blank"><img src="/fso_website_email_bird/static/src/images/Facebook-hell.png" alt="Facebook" title="Facebook"/></a>
-                                                                                </p>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-        
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -273,19 +235,14 @@
                                                             <td class="textContent ckediting_disabled" align="center" valign="top" contenteditable="false">
                                                                 
                                                                 <!-- content left -->
-                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft">
+                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft bird_footer_social">
                                                                     <tbody>
                                                                         <tr>
-                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
-                                                                                <p style="text-align: left;">
-                                                                                    BirdLife Österreich - Gesellschaft für Vogelkunde. Diese E-Mail wurde an
-                                                                                    <span class="ckediting_disabled drop_in drop_in_print_field pf_email">
-                                                                                        <span class="pf_email" data-fs-email-placeholder="%Email%" title="%Email%">
-                                                                                            maximilian.mustermann@meinedomain.com
-                                                                                        </span>
-                                                                                    </span>
-                                                                                    gesandt. Sie erhalten dieses E-Mail, weil Sie BirdLife Österreich - Gesellschaft für Vogelkunde mit Spenden unterstützen oder
-                                                                                    weil Sie sich für unseren Newsletter angemeldet haben.
+                                                                            <td align="left" class="textContent ckediting_enabled" valign="top">
+                                                                                <p style="text-align: center;">
+                                                                                    <a href="https://www.facebook.com/BirdLifeOesterreich/" target="_blank"><img src="/fso_website_email_bird/static/src/images/Facebook_Icon.png" alt="Facebook" title="Facebook"/></a>
+                                                                                    <a href="https://www.instagram.com/birdlife_austria/" target="_blank"><img src="/fso_website_email_bird/static/src/images/Instagram_Icon.png" alt="Instagram" title="Instagram"/></a>
+                                                                                    <a href="https://twitter.com/BirdLifeAustria" target="_blank"><img src="/fso_website_email_bird/static/src/images/Twitter_Icon.png" alt="Twitter" title="Twitter"/></a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -296,14 +253,15 @@
                                                                 <table align="right" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerRight">
                                                                     <tbody>
                                                                         <tr>
-                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
-                                                                                <p style="text-align: right;">
-                                                                                    <strong>Unsere Anschrift lautet:</strong><br/>
-                                                                                    BirdLife Österreich - Gesellschaft für Vogelkunde<br/>
-                                                                                    A-1070 Wien, Museumsplatz 1/10/8<br/>
-                                                                                    Tel.: +43 (0) 1 523 465 1<br/>
-                                                                                    E-Mail: <a href="mailto:office@birdlife.at" target="_blank">office@birdlife.at</a><br/>
-                                                                                    Website: <a href="https://www.birdlife.at/" target="_blank">www.birdlife.at</a>
+                                                                            <td align="right" class="textContent ckediting_enabled" valign="top">
+                                                                                <p style="text-align: center;">
+                                                                                    BirdLife Österreich<br/>
+                                                                                    Museumsplatz 1/10/8<br/>
+                                                                                    1070 Wien<br/>
+                                                                                    ZVR: 093531738<br/>
+                                                                                    +43 (0)1/5234651<br/>
+                                                                                    <a href="mailto:office@birdlife.at" target="_blank">office@birdlife.at</a><br/>
+                                                                                    <a href="https://www.birdlife.at/" target="_blank">www.birdlife.at</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
