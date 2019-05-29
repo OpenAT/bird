@@ -1,0 +1,5 @@
+/* fix sticky header space and add bottom space in edit mode */
+#wrapwrap {
+    margin-top: 42px;
+    margin-bottom: 600px;
+}

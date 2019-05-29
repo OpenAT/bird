@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+
+
+    <!-- INHERIT AND EXTEND theme_default_snippets -->
+    <template id="email_theme_bird_snippets_overrides" inherit_id="fso_website_email.theme_framework_snippets" name="Email Theme Bird Snippet overrides">
+
+        <!--&lt;!&ndash; Additional Button Options &ndash;&gt;-->
+        <!--<xpath expr="//div[@data-snippet-option-id='drop_in_button_style']//ul/li[1]" position="after">-->
+            <!--<li data-value='bird_di_button_orange'><a>Orange</a></li>-->
+            <!--<li data-value='bird_di_button_blue'><a>Blue</a></li>-->
+            <!--<li data-value='bird_di_button_pink'><a>Pink</a></li>-->
+        <!--</xpath>-->
+        <!---->
+        <!--&lt;!&ndash; Additional Foreground styles &ndash;&gt;-->
+        <xpath expr="//div[@data-snippet-option-id='dadi_sb_fg_color']//ul/li[1]" position="after">
+            <li data-value='bird_sb_fg_blue'><a>Blue</a></li>
+            <li data-value='bird_sb_fg_green'><a>Green</a></li>
+        </xpath>
+        <!-- dd -->
+        <!--&lt;!&ndash; Additional Background styles &ndash;&gt;-->
+        <xpath expr="//div[@data-snippet-option-id='dadi_sb_bg_color']//ul/li[1]" position="after">
+            <li data-value='bird_sb_bg_blue'><a>Blue</a></li>-
+            <li data-value='bird_sb_bg_green'><a>Green</a></li>
+        </xpath>
+
+    </template>
+
+    <!-- THEME 'bird' SNIPPETS -->
+    <!-- These snippets will be loaded in the template 'email_theme_bird_assets_editmode' by java script (see below) -->
+    <template id="email_theme_bird_snippets">
+        <!-- Simply Load theme_default_snippets :) -->
+        <t t-call="fso_website_email.theme_framework_snippets"/>
+    </template>
+
+
+</data>
+</openerp>

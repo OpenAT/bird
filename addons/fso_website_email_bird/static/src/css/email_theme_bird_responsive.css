@@ -1,0 +1,45 @@
+/* ---------- */
+/* RESPONSIVE */
+/* ---------- */
+
+@media only screen and (max-width: 480px) {
+    #bird_header_body {
+        display: none !important;
+    }
+
+    #bird_header_body, #emailBody, #bird_footer_body,
+    table.flexibleContainer {
+        width: 100% !important;
+    }
+
+    .h1, h1{
+        font-size: 28px;
+        padding-bottom: 12px;
+        font-weight: 700;
+    }
+
+    .h2, h2{
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    .h3, h3{
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .h4, h4{
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .h5, h5{
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .h6, h6{
+        font-size: 14px;
+        font-weight: 300;
+    }
+}

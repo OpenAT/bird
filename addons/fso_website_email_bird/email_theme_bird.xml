@@ -2,42 +2,15 @@
 <openerp>
 <data>
     
-    <!-- INHERIT AND EXTEND theme_default_snippets -->
-    <template id="email_theme_bird_snippets_overrides" inherit_id="fso_website_email.theme_default_snippets" name="Email Theme Bird Snippet overrides">
-        
-        <!--&lt;!&ndash; Additional Button Options &ndash;&gt;-->
-        <!--<xpath expr="//div[@data-snippet-option-id='drop_in_button_style']//ul/li[1]" position="after">-->
-            <!--<li data-value='bird_di_button_orange'><a>Orange</a></li>-->
-            <!--<li data-value='bird_di_button_blue'><a>Blue</a></li>-->
-            <!--<li data-value='bird_di_button_pink'><a>Pink</a></li>-->
-        <!--</xpath>-->
-        <!---->
-        <!--&lt;!&ndash; Additional Foreground styles &ndash;&gt;-->
-        <xpath expr="//div[@data-snippet-option-id='dadi_sb_fg_color']//ul/li[1]" position="after">
-            <li data-value='bird_sb_fg_blue'><a>Blue</a></li>
-            <li data-value='bird_sb_fg_green'><a>Green</a></li>
-        </xpath>
-        <!-- dd -->
-        <!--&lt;!&ndash; Additional Background styles &ndash;&gt;-->
-        <xpath expr="//div[@data-snippet-option-id='dadi_sb_bg_color']//ul/li[1]" position="after">
-            <li data-value='bird_sb_bg_blue'><a>Blue</a></li>-
-            <li data-value='bird_sb_bg_green'><a>Green</a></li>
-        </xpath>
-        
-    </template>
-    
-    <!-- THEME 'bird' SNIPPETS -->
-    <!-- These snippets will be loaded in the template 'email_theme_bird_assets_editmode' by java script (see below) -->
-    <template id="email_theme_bird_snippets">
-        <!-- Simply Load theme_default_snippets :) -->
-        <t t-call="fso_website_email.theme_default_snippets"/>
-    </template>
-    
-    
     <!-- THEME 'bird' ASSETS -->
     <!-- ATTENTION: At least one local css <link> or inline <style> tag  (even if just empty) MUST exist in an assets template -->
     <template id="email_theme_bird_assets">
         <link href='/fso_website_email_bird/static/src/css/email_theme_bird.css' rel='stylesheet' type='text/css' t-ignore="true"/>
+        <link href='/fso_website_email_bird/static/src/css/email_theme_bird_snippets.css' rel='stylesheet' type='text/css' t-ignore="true"/>
+        <link href='/fso_website_email_bird/static/src/css/email_theme_bird_snippets_buttons.css' rel='stylesheet' type='text/css' t-ignore="true"/>
+
+        <link href='/fso_website_email_bird/static/src/css/email_theme_bird_responsive.css' rel='stylesheet' type='text/css' t-ignore="true"/>
+        <link href='/fso_website_email_bird/static/src/css/email_theme_bird_snippets_buttons_responsive.css' rel='stylesheet' type='text/css' t-ignore="true"/>
     </template>
     
     <!-- THEME 'bird' ASSETS EDITMODE -->
@@ -59,68 +32,13 @@
                 })();
             //]]>
         </script>
-        
-        <!-- Override CKEditor Settings -->
-        <script type="text/javascript">
-            //<![CDATA[
-            (function () {
-                'use strict';
-                // Overwrite class method of website/static/src/js/website.editor.js@839
-                // to append/set/override CKEDITOR.config for wrapwrap editor
-                openerp.website.RTE = openerp.website.RTE.extend({
-                    _config: function () {
-                        // Run the original method to modify it's result
-                        var config =  this._super();
-                        
-                        // Set custom toolbar
-                        // https://docs.ckeditor.com/ckeditor4/latest/guide/dev_toolbar.html
-                        config.toolbar = [{
-                            name: 'basicstyles', items: [
-                                "Bold", "Italic", "Underline", "Strike", "Subscript",
-                                "Superscript", "TextColor", "BGColor", "RemoveFormat"
-                            ]
-                        }, {
-                            name: 'span', items: [
-                                "Link", "Blockquote", "BulletedList",
-                                "NumberedList", "Indent", "Outdent"
-                            ]
-                        }, {
-                            name: 'justify', items: [
-                                "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock"
-                            ]
-                        }, {
-                            name: 'special', items: [
-                                "Image"
-                            ]
-                        }, {
-                            name: 'styles', items: [
-                                "Styles"
-                            ]
-                        }
-                        ];
-                        
-                        // Add Custom font and font background colors
-                        config.colorButton_colors = 'ffffff,555555,000000,cccccc,b32986,f49800,407cca,57c940,c9c940,c94740';
-                        // config.colorButton_colorsPerRow = 4;
-                        // config.colorButton_enableAutomatic = true;
-                        
-                        // return the config
-                        return config;
-                    }
-                });
-            })();
-            //]]>
-        </script>
-        
-        <style>
-            /* fix sticky header space and add bottom space in edit mode */
-            #wrapwrap {
-                margin-top: 42px;
-                margin-bottom: 600px;
-            }
-        </style>
-    </template>
 
+        <!-- Override CKEditor Settings -->
+        <script src='/fso_website_email_bird/static/src/js/email_theme_bird_ckeditor.js' type='text/javascript' t-ignore="true"/>
+
+        <!-- CSS for edit mode only -->
+        <link href='/fso_website_email_bird/static/src/css/bird_editmode_only.css' rel='stylesheet' type='text/css' t-ignore="true"/>
+    </template>
     
     <!-- BIRD HEADER CONTENT -->
     <template id="email_theme_bird_header" name="BIRD Header">
@@ -299,7 +217,9 @@
 
             <!-- TEMPLATE SETTINGS -->
             <!-- ================= -->
-            <t t-set="load_default_theme" t-value="True"/>
+            <t t-set="load_theme_framework" t-value="True"/>
+            <t t-set="skipp_theme_framework_responsive_css" t-value="False"/>
+
             <!-- ================= -->
 
             <head>
@@ -328,18 +248,18 @@
                     <center>
                         <table id="bodyTable" class="ckediting_disabled" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
 
-                            <!-- HEADER -->
-                            <!--<tr>-->
-                                <!--<td id='open_in_browser' class="headerCell ckediting_disabled" align="center">-->
-                                    <!--Wenn diese Nachricht nicht richtig angezeigt wird, verwenden Sie bitte die-->
-                                    <!--<![CDATA[-->
-                                    <!--<a id="view-email-in-browser"-->
-                                       <!--href="%open_browser%" target="_blank">-->
-                                         <!--Online-Version-->
-                                    <!--</a>-->
-                                    <!--]]>-->
-                                <!--</td>-->
-                            <!--</tr>-->
+                            <!-- OPEN IN BROWSER -->
+                            <tr>
+                                <td id='open_in_browser' class="headerCell ckediting_disabled" align="center">
+                                    Wenn diese Nachricht nicht richtig angezeigt wird, verwenden Sie bitte die
+                                    <![CDATA[
+                                    <a id="view-email-in-browser"
+                                       href="%open_browser%" target="_blank">
+                                         Online-Version
+                                    </a>
+                                    ]]>
+                                </td>
+                            </tr>
                             
                             <!-- BIRD HEADER -->
                             <tr>

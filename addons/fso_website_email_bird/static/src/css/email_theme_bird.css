@@ -79,9 +79,9 @@ html body #wrapwrap {
     padding: 15px 20px;
 }*/
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   #bird_header {
-    display: none!important;
+    display: none !important;
     }
 }
 
@@ -127,55 +127,6 @@ html body #wrapwrap {
 #bird_footer .bird_footer_info .flexibleContainerRight {
     /* background-color: #0070ac;*/
     color: white;
-}
-
-
-
-/* ------------------------------- */
-/* bird SIZING FOR 650 PIXEL WIDTH */
-/* ------------------------------- */
-#emailBody {
-    width: 600px;
-}
-
-/* Snippets */
-.flexibleContainer {
-    width: 600px;
-}
-
-.snippet_block_text_twocol .flexibleContainerRight,
-.snippet_block_text_twocol .flexibleContainerRight .flexibleImage {
-    width: 245px;
-}
-.snippet_block_text_twocol .flexibleContainerLeft,
-.snippet_block_text_twocol .flexibleContainerLeft .flexibleImage {
-    width: 245px;
-}
-.snippet_block_text_threecol .flexibleContainer33,
-.snippet_block_text_threecol .flexibleContainer33 .flexibleImage {
-    width: 140px;
-}
-
-.snippet_block_text_image_left .flexibleContainerRight,
-.snippet_block_text_image_left .flexibleContainerRight .flexibleImage {
-    width: 340px;
-}
-.snippet_block_text_image_right .flexibleContainerLeft,
-.snippet_block_text_image_right .flexibleContainerLeft .flexibleImage {
-    width: 340px;
-}
-.snippet_block_banner .flexibleImage,
-.snippet_block_banner.dadi_sb_bg_normal .flexibleImage {
-    width: 560px;
-    max-width: 560px;
-}
-.snippet_block_banner.dadi_sb_bg_full .flexibleImage {
-    width: 600px;
-    max-width: 600px;
-}
-.snippet_block_banner.dadi_sb_bg_narrow .flexibleImage {
-    width: 520px;
-    max-width: 520px;
 }
 
 
@@ -273,171 +224,9 @@ blockquote {
     border-left: 5px solid #49ac2e;
 }
 
-
-/* ------- */
-/* BUTTONS */
-/* ------- */
-#emailBody .drop_in_button a {
-    display: block;
-    border-radius: 0;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 2px 16px;
-    line-height: 26px;
-    text-decoration: none;
+.bird_date_in_header {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    line-height: 22px;
     color: #5a5a5a;
-}
-#emailBody .drop_in_button.dadi_di_button_medium,
-#emailBody .drop_in_button.dadi_di_button_medium a {
-    font-size: 18px;
-    padding: 12px 40px;
-    line-height: 26px;
-    border-radius: 3px;
-}
-#emailBody .drop_in_button.dadi_di_button_large,
-#emailBody .drop_in_button.dadi_di_button_large a {
-    font-size: 20px;
-    padding: 15px 50px;
-    line-height: 30px;
-    border-radius: 3px;
-}
-#emailBody .drop_in_button.dadi_di_button_huge,
-#emailBody .drop_in_button.dadi_di_button_huge a {
-    font-size: 26px;
-    padding: 20px 60px;
-    line-height: 40px;
-    border-radius: 6px;
-    font-weight: 700;
-}
-
-/* switch to inline block for the line-height TODO check with litmus */
-#emailBody .drop_in_button.dadi_di_button_fullleft a,
-#emailBody .drop_in_button.dadi_di_button_fullcenter a,
-#emailBody .drop_in_button.dadi_di_button_fullright a {
-    display: inline-block;
-}
-
-#emailBody .drop_in_button.dadi_di_button_transparent a {
-    background-color: transparent;
-}
-#emailBody .drop_in_button.dadi_di_button_black a {
-    background-color: #000000;
-}
-#emailBody .drop_in_button.dadi_di_button_green a {
-    background-color: #49ac2e;
-    color: white;
-}
-#emailBody .drop_in_button.dadi_di_button_yellow a {
-    background-color: #f4e485;
-    color: #5a5a5a;
-}
-#emailBody .drop_in_button.dadi_di_button_red a {
-    background-color: #c41501;
-    color: white;
-}
-#emailBody .drop_in_button.dadi_di_button_blue a {
-    background-color: #0070ac;
-    color: white;
-    border-color: #0070ac;
-}
-#emailBody .drop_in_button.dadi_di_button_orange a {
-    background-color: #f49800;
-    color: white;
-    border-color: #f49800;
-}
-#emailBody .drop_in_button.dadi_di_button_pink a {
-    background-color: #b32986;
-    color: white;
-    border-color: #b32986;
-}
-
-
-.drop_in_button.dadi_di_button_medium,
-.drop_in_button.dadi_di_button_medium a {
-    border-radius: 0;
-}
-.drop_in_button.dadi_di_button_large,
-.drop_in_button.dadi_di_button_large a {
-    border-radius: 0;
-}
-.drop_in_button.dadi_di_button_huge,
-.drop_in_button.dadi_di_button_huge a {
-    border-radius: 0;
-}
-
-
-/* --------------- */
-/* SNIPPET OPTIONS */
-/* --------------- */
-.dadi_sb_bg_lightgrey .flexibleContainerCell,
-.dadi_sb_fg_lightgrey .flexibleContainerCell .nestedContainerCell {
-    background-color: #f9f9f9;
-}
-
-.dadi_sb_bg_grey .flexibleContainerCell,
-.dadi_sb_fg_grey .flexibleContainerCell .nestedContainerCell {
-    background-color: #9a9a9a;
-}
-
-.dadi_sb_bg_orange .flexibleContainerCell,
-.dadi_sb_fg_orange .flexibleContainerCell .nestedContainerCell {
-    background-color: #f4e485;
-    color: white;
-}
-
-.dadi_sb_bg_pink .flexibleContainerCell,
-.dadi_sb_fg_pink .flexibleContainerCell .nestedContainerCell {
-    background-color: #fb8dca;
-    color: white;
-}
-
-.dadi_sb_bg_blue .flexibleContainerCell,
-.dadi_sb_fg_blue .flexibleContainerCell .nestedContainerCell {
-    background-color: #0070ac;
-    color: white;
-}
-
-.dadi_sb_fg_pink .flexibleContainerCell .nestedContainerCell,
-.dadi_sb_fg_blue .flexibleContainerCell .nestedContainerCell {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 3px;
-}
-
-
-/* ---------- */
-/* RESPONSIVE */
-/* ---------- */
-@media (max-width: 414px) {
-    body p,
-    body h1, body h2, body h3, body h4, body h5, body h6 {
-        font-size: inherit;
-    }
-    body h1 {
-        font-size: 46px;
-        padding-bottom: 12px;
-        font-weight: bold;
-    }
-    .h2, body h2 {
-        font-size: 33px;
-        font-weight: bold;
-    }
-    .h3, body h3 {
-        font-size: 27px;
-        font-weight: bold;
-    }
-    .h4, body h4 {
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .h5, body h5 {
-        font-size: 14px;
-        font-weight: bold;
-    }
-    .h6, body h6 {
-        font-size: 12px;
-        font-weight: bold;
-    }
 }

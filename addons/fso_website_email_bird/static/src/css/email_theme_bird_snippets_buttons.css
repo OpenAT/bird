@@ -1,0 +1,98 @@
+/* ------- */
+/* BUTTONS */
+/* ------- */
+#emailBody .drop_in_button a {
+    display: block;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 2px 16px;
+    line-height: 26px;
+    text-decoration: none;
+    color: #5a5a5a;
+}
+#emailBody .drop_in_button.dadi_di_button_medium,
+#emailBody .drop_in_button.dadi_di_button_medium a {
+    font-size: 18px;
+    padding: 12px 40px;
+    line-height: 26px;
+    border-radius: 3px;
+}
+#emailBody .drop_in_button.dadi_di_button_large,
+#emailBody .drop_in_button.dadi_di_button_large a {
+    font-size: 20px;
+    padding: 15px 50px;
+    line-height: 30px;
+    border-radius: 3px;
+}
+#emailBody .drop_in_button.dadi_di_button_huge,
+#emailBody .drop_in_button.dadi_di_button_huge a {
+    font-size: 26px;
+    padding: 20px 60px;
+    line-height: 40px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+/* switch to inline block for the line-height TODO check with litmus */
+#emailBody .drop_in_button.dadi_di_button_fullleft a,
+#emailBody .drop_in_button.dadi_di_button_fullcenter a,
+#emailBody .drop_in_button.dadi_di_button_fullright a {
+    display: inline-block;
+}
+
+#emailBody .drop_in_button.dadi_di_button_transparent a {
+    background-color: transparent;
+}
+#emailBody .drop_in_button.dadi_di_button_black a {
+    background-color: #000000;
+}
+#emailBody .drop_in_button.dadi_di_button_green a {
+    background-color: #49ac2e;
+    color: white;
+}
+#emailBody .drop_in_button.dadi_di_button_yellow a {
+    background-color: #f4e485;
+    color: #5a5a5a;
+}
+#emailBody .drop_in_button.dadi_di_button_red a {
+    background-color: #c41501;
+    color: white;
+}
+#emailBody .drop_in_button.dadi_di_button_blue a {
+    background-color: #0070ac;
+    color: white;
+    border-color: #0070ac;
+}
+#emailBody .drop_in_button.dadi_di_button_orange a {
+    background-color: #f49800;
+    color: white;
+    border-color: #f49800;
+}
+#emailBody .drop_in_button.dadi_di_button_pink a {
+    background-color: #b32986;
+    color: white;
+    border-color: #b32986;
+}
+
+
+.drop_in_button.dadi_di_button_medium,
+.drop_in_button.dadi_di_button_medium a {
+    border-radius: 0;
+}
+.drop_in_button.dadi_di_button_large,
+.drop_in_button.dadi_di_button_large a {
+    border-radius: 0;
+}
+.drop_in_button.dadi_di_button_huge,
+.drop_in_button.dadi_di_button_huge a {
+    border-radius: 0;
+}
+
+/* WIDHT */
+#emailBody span.drop_in_button.dadi_di_button_width_full a {
+    width: 100%
+}
+#emailBody span.drop_in_button.dadi_di_button_width_half a {
+    width: 50%
+}

@@ -1,0 +1,119 @@
+/* ------------------------------- */
+/* bird SIZING FOR 650 PIXEL WIDTH */
+/* ------------------------------- */
+#emailBody {
+    width: 650px;
+}
+
+/* Snippets */
+.flexibleContainer {
+    width: 650px;
+}
+
+/* snippet_block_text_image_left */
+.snippet_block_text_image_left .flexibleContainerRight,
+.snippet_block_text_image_left .flexibleContainerRight .flexibleImage {
+    width: 340px;
+}
+.snippet_block_text_image_left.dadi_sb_fg_darkgrey .flexibleContainerRight,
+.snippet_block_text_image_left.dadi_sb_fg_grey .flexibleContainerRight,
+.snippet_block_text_image_left.dadi_sb_fg_lightgrey .flexibleContainerRight,
+.snippet_block_text_image_left.dadi_sb_fg_orange .flexibleContainerRight {
+    width: 340px;
+}
+
+/* snippet_block_text_image_right */
+.snippet_block_text_image_right .flexibleContainerLeft,
+.snippet_block_text_image_right .flexibleContainerLeft .flexibleImage {
+    width: 340px;
+}
+.snippet_block_text_image_right.dadi_sb_fg_darkgrey .flexibleContainerLeft,
+.snippet_block_text_image_right.dadi_sb_fg_grey .flexibleContainerLeft,
+.snippet_block_text_image_right.dadi_sb_fg_lightgrey .flexibleContainerLeft,
+.snippet_block_text_image_right.dadi_sb_fg_orange .flexibleContainerLeft {
+    width: 340px;
+}
+
+/* snippet_block_text_twocol */
+.snippet_block_text_twocol .flexibleContainerRight,
+.snippet_block_text_twocol .flexibleContainerRight .flexibleImage {
+    width: 245px;
+}
+.snippet_block_text_twocol .flexibleContainerLeft,
+.snippet_block_text_twocol .flexibleContainerLeft .flexibleImage {
+    width: 245px;
+}
+.snippet_block_text_twocol.dadi_sb_fg_normal .flexibleContainerCell .nestedContainerCell {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.snippet_block_text_twocol.dadi_sb_fg_normal .flexibleContainerRight,
+.snippet_block_text_twocol.dadi_sb_fg_normal .flexibleContainerRight .flexibleImage {
+    width: 273px;
+}
+.snippet_block_text_twocol.dadi_sb_fg_normal .flexibleContainerLeft,
+.snippet_block_text_twocol.dadi_sb_fg_normal .flexibleContainerLeft .flexibleImage {
+    width: 273px;
+}
+
+/* snippet_block_text_threecol */
+.snippet_block_text_threecol .flexibleContainer33,
+.snippet_block_text_threecol .flexibleContainer33 .flexibleImage {
+    width: 190px;
+}
+
+/* snippet_block_banner */
+.snippet_block_banner .flexibleImage,
+.snippet_block_banner.dadi_sb_bg_normal .flexibleImage {
+    width: 560px;
+    max-width: 560px;
+}
+
+.snippet_block_banner.dadi_sb_bg_full .flexibleImage {
+    width: 650px;
+    max-width: 650px;
+}
+.snippet_block_banner.dadi_sb_bg_narrow .flexibleImage {
+    width: 570px;
+    max-width: 570px;
+}
+
+/* --------------- */
+/* SNIPPET OPTIONS */
+/* --------------- */
+.dadi_sb_bg_lightgrey .flexibleContainerCell,
+.dadi_sb_fg_lightgrey .flexibleContainerCell .nestedContainerCell {
+    background-color: #f9f9f9;
+}
+
+.dadi_sb_bg_grey .flexibleContainerCell,
+.dadi_sb_fg_grey .flexibleContainerCell .nestedContainerCell {
+    background-color: #9a9a9a;
+}
+
+.dadi_sb_bg_orange .flexibleContainerCell,
+.dadi_sb_fg_orange .flexibleContainerCell .nestedContainerCell {
+    background-color: #f4e485;
+    color: white;
+}
+
+.dadi_sb_bg_pink .flexibleContainerCell,
+.dadi_sb_fg_pink .flexibleContainerCell .nestedContainerCell {
+    background-color: #fb8dca;
+    color: white;
+}
+
+.dadi_sb_bg_blue .flexibleContainerCell,
+.dadi_sb_fg_blue .flexibleContainerCell .nestedContainerCell {
+    background-color: #0070ac;
+    color: white;
+}
+
+.dadi_sb_fg_pink .flexibleContainerCell .nestedContainerCell,
+.dadi_sb_fg_blue .flexibleContainerCell .nestedContainerCell {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 3px;
+}

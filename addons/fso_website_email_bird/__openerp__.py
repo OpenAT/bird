@@ -42,6 +42,7 @@ Custom Newsletter-Theme for Bird based on the website design.
         'fso_website_email',
     ],
     'data': [
+        'email_theme_bird_snippets.xml',
         'email_theme_bird.xml',
     ],
     'qweb': [
