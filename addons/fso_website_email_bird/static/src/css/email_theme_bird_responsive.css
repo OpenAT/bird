@@ -6,6 +6,9 @@
     #bird_header_body {
         display: none !important;
     }
+    table.flexibleContainerLeft.bird_footer_social {
+        margin-bottom: 0px !important;
+    }
 
     #bird_header_body, #emailBody, #bird_footer_body,
     table.flexibleContainer {

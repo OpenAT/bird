@@ -87,55 +87,10 @@
             </table>
         </div>
     </template>
-    
-    
+
     <!-- BIRD Footer CONTENT -->
     <template id="email_theme_bird_footer" name="BIRD Footer">
-        
-        <!-- Abmeldelink und Social Media -->
-        <div class="bird_footer_social ckediting_disabled">
-            <table class="centeringTable" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td align="center" valign="top">
-                        <table class="flexibleContainer" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td class="flexibleContainerCell" align="center" valign="top">
-                                    <table class="nestedContainer" border="0" cellpadding="0" cellspacing="0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="nestedContainerCell" align="center" valign="top">
-                                                    <table class="contentTable" border="0" cellpadding="0" cellspacing="0">
-                                                        <tr>
-                                                            <td class="textContent ckediting_disabled" align="center" valign="top" contenteditable="false">
-                                                                
-                                                                <!-- content right -->
-                                                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerCenter">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
-                                                                                <p style="text-align: center;">
-                                                                                    <a href="/unsubscribe">Newsletter abbestellen</a>
-                                                                                </p>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        
-        <!-- Info und Addresse -->
+
         <div class="bird_footer_info dadi_sb_bg_full ckediting_disabled">
             <table class="centeringTable" cellpadding="0" cellspacing="0">
                 <tr>
@@ -150,12 +105,24 @@
                                                     <table class="contentTable" border="0" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td class="textContent ckediting_disabled" align="center" valign="top" contenteditable="false">
-                                                                
-                                                                <!-- content left -->
-                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft bird_footer_social">
+
+                                                                <!-- Abmeldelink und Social Media -->
+                                                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerCenter bird_footer_unsubscribe_info">
                                                                     <tbody>
                                                                         <tr>
-                                                                            <td align="left" class="textContent ckediting_enabled" valign="top">
+                                                                            <td align="center" class="textContent ckediting_enabled" valign="top">
+                                                                                <p style="text-align: center;">
+                                                                                    <a href="/unsubscribe">Newsletter abbestellen</a>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <!-- content left -->
+                                                                <table id="bird_footer_left" align="left" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerLeft bird_footer_social">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="left" class="textContent ckediting_enabled" valign="bottom">
                                                                                 <p style="text-align: center;">
                                                                                     <a href="https://www.facebook.com/BirdLifeOesterreich/" target="_blank"><img src="/fso_website_email_bird/static/src/images/Facebook_Icon.png" alt="Facebook" title="Facebook"/></a>
                                                                                     <a href="https://www.instagram.com/birdlife_austria/" target="_blank"><img src="/fso_website_email_bird/static/src/images/Instagram_Icon.png" alt="Instagram" title="Instagram"/></a>
@@ -165,9 +132,8 @@
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
-                                                                
                                                                 <!-- content right -->
-                                                                <table align="right" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerRight">
+                                                                <table id="bird_footer_right" align="right" border="0" cellpadding="0" cellspacing="0" class="flexibleContainerRight bird_footer_contact_info">
                                                                     <tbody>
                                                                         <tr>
                                                                             <td align="right" class="textContent ckediting_enabled" valign="top">
@@ -184,7 +150,6 @@
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
-        
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -199,6 +164,7 @@
                 </tr>
             </table>
         </div>
+
         
     </template>
     

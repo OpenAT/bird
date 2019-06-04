@@ -1,6 +1,19 @@
 /* ---- */
 /* MAIN */
 /* ---- */
+/* ------------------------------- */
+/* BIRD SIZING FOR 650 PIXEL WIDTH */
+/* ------------------------------- */
+#bird_header_body, #emailBody, #bird_footer_body {
+    margin: 0 auto;
+    width: 100%;
+}
+#bird_header_body .flexibleContainer,
+#emailBody .flexibleContainer,
+#bird_footer_body .flexibleContainer {
+    width: 650px;
+}
+
 /* Set Basic Colors */
 .dadi_sb_fg_darkgrey .flexibleContainerCell .nestedContainerCell {
  background-color: #4c4c4c !important;
@@ -79,11 +92,11 @@ html body #wrapwrap {
     padding: 15px 20px;
 }*/
 
-@media screen and (max-width: 700px) {
+/*@media screen and (max-width: 700px) {
   #bird_header {
     display: none !important;
     }
-}
+}*/
 
 /* body */
 #bodyCell {
@@ -92,6 +105,39 @@ html body #wrapwrap {
 }
 
 /* bird footer */
+
+#bird_footer {
+    color: white;
+    text-color: white;
+    background-color: #0070ac;
+    padding-top: 1em;
+    /* Fix for Aplle iOS clients */
+    padding-bottom: 10px;
+}
+
+#bird_footer a:-webkit-any-link {
+color: inherit !important;
+    text-color: inherit !important;
+text-decoration: none;
+}
+
+#bird_footer .flexibleContainerLeft,
+#bird_footer .flexibleContainerRight {
+    width: 50%;
+}
+#bird_footer .bird_footer_unsubscribe_info a {
+    color: white;
+    text-color: white;
+}
+#bird_footer_left h6,
+#bird_footer_left p {
+    text-align: left;
+}
+#bird_footer_right a {
+    color: white;
+    text-color: white;
+}
+/* xxx
 #bird_footer {
     font-size: 11px;
     line-height: 13px;
@@ -102,15 +148,28 @@ html body #wrapwrap {
 #bird_footer .flexibleContainerLeft,
 #bird_footer .flexibleContainerRight {
     width: 50%;
+    background-color: #0070ac;
 }
-
-#bird_footer .bird_footer_social .flexibleContainer {
+#bird_footer .bird_footer_abmeldelink .flexibleContainer {
     border-top: 1px solid #dddddd;
     background-color: #0070ac;
 }
-#bird_footer .bird_footer_social .contentTable .textContent {
+#bird_footer .bird_footer_abmeldelink .contentTable .textContent {
     padding-top: 5px;
     padding-bottom: 5px;
+}
+*/
+/*
+.bird_footer_social {
+    background-color: #0070ac;
+}
+.bird_footer_contact_info {
+    background-color: #0070ac;
+}
+*/
+/*xxx
+#bird_footer > div.bird_footer_info.dadi_sb_bg_full.ckediting_disabled > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td {
+        background-color: #0070ac;
 }
 #bird_footer .bird_footer_social img {
     width: 32px;
@@ -121,13 +180,25 @@ html body #wrapwrap {
 #bird_footer .bird_footer_info > table > tbody > tr > td > table > tbody > tr > td > table {
     background-color: #0070ac;
 }
+table.flexibleContainerLeft.bird_footer_social {
+    margin-bottom: 0px !important;
+}
+
+#bird_footer .bird_footer_info .textContent.ckediting_disabled {
+            background-color: #0070ac !important;
+
+}
+table.flexibleContainerLeft.bird_footer_social {
+        background-color: #0070ac !important;
+}
 #bird_footer .bird_footer_info .flexibleContainerLeft .textContent {
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 #bird_footer .bird_footer_info .flexibleContainerRight {
-    /* background-color: #0070ac;*/
     color: white;
 }
+*/
 
 
 /* ---------- */
