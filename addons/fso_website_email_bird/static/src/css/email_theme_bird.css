@@ -87,16 +87,6 @@ html body #wrapwrap {
 #bird_header table.flexibleContainerCenter .imageContent img {
     width: 60%;
 }
-/*#bird_header table.flexibleContainerLeft .imageContent,*/
-/*#bird_header table.flexibleContainerRight .textContent {
-    padding: 15px 20px;
-}*/
-
-/*@media screen and (max-width: 700px) {
-  #bird_header {
-    display: none !important;
-    }
-}*/
 
 /* body */
 #bodyCell {
@@ -104,108 +94,75 @@ html body #wrapwrap {
     padding-bottom: 0;
 }
 
-/* bird footer */
-
-#bird_footer {
-    color: white;
-    text-color: white;
-    background-color: #0070ac;
-    padding-top: 1em;
-    /* Fix for Aplle iOS clients */
-    padding-bottom: 10px;
-}
-
-#bird_footer a:-webkit-any-link {
-color: inherit !important;
-    text-color: inherit !important;
-text-decoration: none;
-}
-
-#bird_footer .flexibleContainerLeft,
-#bird_footer .flexibleContainerRight {
-    width: 50%;
-}
-#bird_footer .bird_footer_unsubscribe_info a {
-    color: white;
-    text-color: white;
-}
-#bird_footer_left h6,
-#bird_footer_left p {
-    text-align: left;
-}
-#bird_footer_right a {
-    color: white;
-    text-color: white;
-}
-/* xxx
-#bird_footer {
-    font-size: 11px;
-    line-height: 13px;
-}
-#bird_footer .contentTable a {
-    color: white;
-}
-#bird_footer .flexibleContainerLeft,
-#bird_footer .flexibleContainerRight {
-    width: 50%;
-    background-color: #0070ac;
-}
-#bird_footer .bird_footer_abmeldelink .flexibleContainer {
-    border-top: 1px solid #dddddd;
-    background-color: #0070ac;
-}
-#bird_footer .bird_footer_abmeldelink .contentTable .textContent {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-*/
-/*
-.bird_footer_social {
-    background-color: #0070ac;
-}
-.bird_footer_contact_info {
-    background-color: #0070ac;
-}
-*/
-/*xxx
-#bird_footer > div.bird_footer_info.dadi_sb_bg_full.ckediting_disabled > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td {
-        background-color: #0070ac;
-}
-#bird_footer .bird_footer_social img {
-    width: 32px;
-}
-#bird_footer .bird_footer_info {
-    padding-top: 0px;
-}
-#bird_footer .bird_footer_info > table > tbody > tr > td > table > tbody > tr > td > table {
-    background-color: #0070ac;
-}
-table.flexibleContainerLeft.bird_footer_social {
-    margin-bottom: 0px !important;
-}
-
-#bird_footer .bird_footer_info .textContent.ckediting_disabled {
-            background-color: #0070ac !important;
-
-}
-table.flexibleContainerLeft.bird_footer_social {
-        background-color: #0070ac !important;
-}
-#bird_footer .bird_footer_info .flexibleContainerLeft .textContent {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-#bird_footer .bird_footer_info .flexibleContainerRight {
-    color: white;
-}
-*/
-
 
 /* ---------- */
 /* Typography */
 /* ---------- */
-body {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'HelveticaNeue', 'Helvetica Neue', 'Segoe UI', 'Dejavu Sans', Helvetica, Arial, sans-serif;
+/* FONT TESTS */
+/*
+@import url('https://www.birdlife.at/bird_config/static/src/css/fonts/css?family=MuseoSans');
+*/
+/* OUTLOOK HACK example
+@font-face {
+font-family: 'YourFont';
+src: url('yourfont.eot');
+src: url('yourfont.eot?#iefix') format('embedded-opentype'),
+url('yourfont.woff2') format('woff2'),
+url('yourfont.woff') format('woff'),
+url('yourfont.ttf') format('truetype'),
+url('yourfont.svg#frankthin') format('svg');
+font-weight: normal;
+font-style: normal;
+mso-font-alt: 'Arial';
+}
+*/
+/*
+@font-face {
+    font-family: MuseoSans;
+    src: url('fonts/MuseoSans100-Italic.otf');
+    src: url('fonts/MuseoSans100-Italic.otf?#iefix') format('embedded-opentype');
+    src: url("fonts/MuseoSans100-Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+    mso-font-alt: 'Arial';
+}
+@font-face {
+    font-family: MuseoSans;
+    src: url('fonts/MuseoSans100-Regular.otf');
+    src: url('fonts/MuseoSans100-Regular.otf?#iefix') format('embedded-opentype');
+    src: url('fonts/MuseoSans100-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    mso-font-alt: 'Arial';
+}
+@font-face {
+    font-family: MuseoSans;
+    src: url('fonts/MuseoSans300-Italic.otf');
+    src: url('fonts/MuseoSans300-Italic.otf?#iefix') format('embedded-opentype');
+    src: url('fonts/MuseoSans300-Italic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+    mso-font-alt: 'Arial';
+}
+@font-face {
+    font-family: MuseoSans;
+    src: url('fonts/MuseoSans300-Regular.otf');
+    src: url('fonts/MuseoSans300-Regular.otf?#iefix') format('embedded-opentype');
+    src: url('fonts/MuseoSans300-Regular.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    mso-font-alt: 'Arial';
+}
+*/
+p, td, a, div, span {
+    /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", Helvetica, Arial, sans-serif;*/
+    font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+     /*
+     font-family: 'Open Sans', Arial, sans-serif;
+     */
+    /*
+    font-family: MuseoSans, Helvetica, Arial, sans-serif;
+    */
     font-size: 14px;
     line-height: 18px;
     color: #5a5a5a;
@@ -223,10 +180,12 @@ p {
     -webkit-margin-end: inherit;
 }
 /* Links */
+
 a {
     color: #0070ac;
     text-decoration: none;
 }
+
 /* Headlines */
 .h1, .h2, .h3,
 h1, h2, h3 {
@@ -234,7 +193,13 @@ h1, h2, h3 {
 }
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6 {
+    font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+     /*
+     font-family: 'Open Sans', arial, sans-serif;
+     */
+    /*
     font-family: MuseoSans, Helvetica, Arial, sans-serif;
+    */
     line-height: 110%;
     color: grey;
 
@@ -254,38 +219,21 @@ h1, h2, h3, h4, h5, h6 {
 .h1, h1 {
     font-size: 46px;
     padding-bottom: 12px;
-    font-weight: bold;
 }
 .h2, h2 {
     font-size: 33px;
-    font-weight: bold;
 }
 .h3, h3 {
     font-size: 27px;
-    font-weight: bold;
 }
 .h4, h4 {
     font-size: 23px;
-    font-weight: bold;
 }
 .h5, h5 {
     font-size: 14px;
-    font-weight: bold;
 }
 .h6, h6 {
     font-size: 12px;
-    font-weight: bold;
-}
-
-.bird_title_image {
-    margin-bottom: 8px;
-}
-.bird_title {
-    font-family: MuseoSans, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    margin-top: 12px;
 }
 
 blockquote {
@@ -294,10 +242,10 @@ blockquote {
     font-size: 20px;
     border-left: 5px solid #49ac2e;
 }
-
+/*
 .bird_date_in_header {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 16px;
     line-height: 22px;
     color: #5a5a5a;
-}
+}*/

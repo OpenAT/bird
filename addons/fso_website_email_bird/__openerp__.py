@@ -43,6 +43,7 @@ Custom Newsletter-Theme for Bird based on the website design.
     ],
     'data': [
         'email_theme_bird_snippets.xml',
+        'email_theme_bird_combined_snippets.xml',
         'email_theme_bird.xml',
     ],
     'qweb': [

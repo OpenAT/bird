@@ -1,0 +1,16 @@
+/* .special button in header style only di button use in this theme */
+
+/* HEADER REWORKED */
+
+
+/* bird footer */
+
+#combinedsnippetfooter span,
+#combinedsnippetfooter td,
+#combinedsnippetfooter p,
+#combinedsnippetfooter div,
+#combinedsnippetfooter a {
+    color: white;
+}
+
+

@@ -2,10 +2,56 @@
 <openerp>
 <data>
 
-
+    <!-- THEME 'bird' SNIPPETS -->
+    <!-- HINT: We simply use the default snippets from 'fso_website_email.theme_framework_snippets' -->
+    <!-- HINT: These snippets will be loaded in the template 'email_theme_bird_assets_editmode' by java script -->
+    <template id="email_theme_bird_snippets">
+        <!-- Simply Load theme_default_snippets :) -->
+        <t t-call="fso_website_email.theme_framework_snippets"/>
+    </template>
 
     <!-- INHERIT AND EXTEND theme_default_snippets -->
     <template id="email_theme_bird_snippets_overrides" inherit_id="fso_website_email.theme_framework_snippets" name="Email Theme Bird Snippet overrides">
+
+
+        <!-- ==================== -->
+        <!--  bird EXTRA SNIPPETS -->
+        <!-- ==================== -->
+        <xpath expr="//div[@id='snippet_email_special']" position="inside">
+
+            <!-- .bird_bin Snippet -->
+            <!-- ================= -->
+            <div>
+                <!-- Icon and name -->
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img"
+                         src="/fso_website_email_bird/static/src/icons/bird_bin.png"/>
+                    <span class="oe_snippet_thumbnail_title">Container</span>
+                </div>
+                <!-- SNIPPET BLOCK -->
+                <div class="oe_snippet_body ckediting_enabled bird_bin" contenteditable="true">
+                </div>
+            </div>
+
+        </xpath>
+
+        <!-- =========================== -->
+        <!-- SNIPPET TARGETS AND OPTIONS -->
+        <!-- =========================== -->
+
+        <!-- .bird_bin Targets -->
+        <xpath expr="//div[@id='snippet_options']" position="inside">
+            <div data-snippet-option-id='bird_bin_target'
+                 data-selector=".bird_bin"
+                 data-selector-siblings="[data-oe-field='body_html'] > div"
+                 data-selector-children="[data-oe-field='body_html']">
+            </div>
+            <div data-snippet-option-id='bird_bin_inside'
+                 data-selector=".snippet_block"
+                 data-selector-siblings=".bird_bin > div"
+                 data-selector-children=".bird_bin">
+            </div>
+        </xpath>
 
         <!--&lt;!&ndash; Additional Button Options &ndash;&gt;-->
         <!--<xpath expr="//div[@data-snippet-option-id='drop_in_button_style']//ul/li[1]" position="after">-->
@@ -26,13 +72,13 @@
             <li data-value='bird_sb_bg_green'><a>Green</a></li>
         </xpath>
 
-    </template>
+                <!-- NEW: .snippet_block_bpbutton Extra Styles -->
+        <xpath expr="//div[@data-snippet-option-id='snippet_block_bpbutton_style']//ul" position="inside">
+            <li data-value='bpbutton_style_green'>
+                <a>Grün</a>
+            </li>
+        </xpath>
 
-    <!-- THEME 'bird' SNIPPETS -->
-    <!-- These snippets will be loaded in the template 'email_theme_bird_assets_editmode' by java script (see below) -->
-    <template id="email_theme_bird_snippets">
-        <!-- Simply Load theme_default_snippets :) -->
-        <t t-call="fso_website_email.theme_framework_snippets"/>
     </template>
 
 

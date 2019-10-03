@@ -11,6 +11,10 @@
             // Set custom toolbar
             // https://docs.ckeditor.com/ckeditor4/latest/guide/dev_toolbar.html
             config.toolbar = [{
+                name: 'insert', items: [
+                    "PrintField"
+                ]
+            }, {
                 name: 'basicstyles', items: [
                     "Bold", "Italic", "Underline", "Strike", "Subscript",
                     "Superscript", "TextColor", "BGColor", "RemoveFormat"
@@ -38,15 +42,16 @@
             // Add Custom font and font background colors
             config.colorButton_colors = 'ffffff,555555,000000,cccccc,b32986,f49800,407cca,57c940,c9c940,c94740';
             // config.colorButton_colorsPerRow = 4;
-            // config.colorButton_enableAutomatic = true;
+            config.colorButton_enableAutomatic = true;
 
 
             // styles dropdown in toolbar
             config.stylesSet = [
                 {name: 'Normal', element: 'p'},
+                {name: 'p Klein', element: 'p', attributes: { 'class': 'bird_small' } },
+                {name: 'p Winzig', element: 'p', attributes: { 'class': 'bird_tiny' } },
                 {name: 'Small', element: 'p', attributes: { 'class': 'bird_small_text' } },
-                {name: 'H1 42', element: 'h1'},
-                {name: 'H1 40', element: 'h1', attributes: { 'class': 'bird_h1_40' } },
+                {name: 'H1 40', element: 'h1'},
                 {name: 'H2 26', element: 'h2'},
                 {name: 'H3 22', element: 'h3'},
                 {name: 'H4 20', element: 'h4'},

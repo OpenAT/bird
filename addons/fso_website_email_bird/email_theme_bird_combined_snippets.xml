@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+
+    <!-- INHERIT AND EXTEND theme_default_snippets -->
+    <template id="email_theme_bird_snippets_overrides_part2" inherit_id="fso_website_email.theme_framework_snippets" name="Email Theme bird Snippet overrides part2">
+
+        <xpath expr="//li[@id='snippet_menu_special']" position="after">
+            <li id="snippet_menu_combined_snippets_bird">
+                <a href="#combined_snippets_bird" data-toggle="tab">Combined</a>
+            </li>
+        </xpath>
+
+                <!-- ======================= -->
+        <!--  bird COMBINED SNIPPETS -->
+        <!-- ======================= -->
+        <xpath expr="//div[@id='snippet_email_special']" position="after">
+            <div id="combined_snippets_bird" class="tab-pane fade">
+
+                <!-- HEADER SNIPPET BLOCK ALLG -->
+                <!-- =============== -->
+                <div>
+                    <!-- Icon and name -->
+                    <div class="oe_snippet_thumbnail">
+                        <img class="oe_snippet_thumbnail_img"
+                             src="/fso_website_email_bird/static/src/icons/header_snippet.png"/>
+                        <span class="oe_snippet_thumbnail_title">Header Snippet</span>
+                    </div>
+                        <div id="combinedheadersnippetWebVersion" class="oe_snippet_body ckediting_enabled snippet_block snippet_block_text_intro bird_sb_bg_background" contenteditable="false">
+                            <table class="centeringTable" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <table class="flexibleContainer" border="0" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="flexibleContainerCell" align="center" valign="top">
+                                                            <table class="nestedContainer" border="0" cellpadding="0"
+                                                                   cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="nestedContainerCell" align="center"
+                                                                            valign="top">
+                                                                            <table class="contentTable" border="0"
+                                                                                   cellpadding="0" cellspacing="0">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="textContent ckediting_enabled"
+                                                                                            contenteditable="true">
+                                                                                            <p class="bird_tiny"
+                                                                                               style="text-align: center;">
+                                                                                                <a id="view-email-in-browser" href="%open_browser%" target="_blank" data-cke-saved-href="%open_Browser%"
+                                                                                                   style="text-align: center; color: gray; font-weight: 700; font-size: 12px;">
+                                                                                                    Zur Webversion
+                                                                                                </a>
+                                                                                            </p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="combinedheadersnippet" class="oe_snippet_body ckediting_enabled snippet_block snippet_block_banner dadi_sb_bg_full" contenteditable="false">
+                            <table class="centeringTable" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <table class="flexibleContainer" border="0" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="flexibleContainerCell" align="center" valign="top">
+                                                            <table class="nestedContainer" border="0" cellpadding="0"
+                                                                   cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="nestedContainerCell" align="center"
+                                                                            valign="top">
+                                                                            <table class="contentTable" border="0"
+                                                                                   cellpadding="0" cellspacing="0">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="textContent ckediting_enabled"
+                                                                                            contenteditable="true">
+                                                                                            <a data-cke-saved-href="https://www.birdlife.at"
+                                                                                               href="https://www.birdlife.at" target="_blank">
+                                                                                                <img src="/fso_website_email_bird/static/src/images/BirdLifeLogo_Oesterreich_Logo_und_Claim_bunt.png"
+                                                                                                     class="flexibleImage snippet_block_banner_image"/>
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+
+                <!-- FOOTER SNIPPET BLOCK -->
+                <!-- =============== -->
+                <div>
+                    <!-- Icon and name -->
+                    <div class="oe_snippet_thumbnail">
+                        <img class="oe_snippet_thumbnail_img"
+                             src="/fso_website_email_bird/static/src/icons/footer_snippet.png"/>
+                        <span class="oe_snippet_thumbnail_title">Footer Snippet</span>
+                    </div>
+
+                    <div class="oe_snippet_body ckediting_disabled bird_bin">
+                        <div id="combinedsnippetfooter" class="ckediting_disabled snippet_block snippet_block_text_intro combinedfooter">
+                            <div class="ckediting_enabled snippet_block snippet_block_text_intro bird_sb_bg_blue footerHeadPart">
+                                <table cellpadding="0" cellspacing="0" class="centeringTable">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                       class="flexibleContainer">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center" class="flexibleContainerCell"
+                                                                valign="top">
+                                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                                       class="nestedContainer">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="center"
+                                                                                class="nestedContainerCell"
+                                                                                valign="top">
+                                                                                <table border="0" cellpadding="0"
+                                                                                       cellspacing="0"
+                                                                                       class="contentTable">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td class="textContent ckediting_enabled">
+                                                                                                <p style="text-align: center;">
+                                                                                                    <span style="color:#cccccc;">
+                                                                                                        <span style="background-color: transparent; color: white; text-align: center;">
+                                                                                                            <a href="/page/newsletterabmeldung">Newsletter abbestellen</a>
+                                                                                                        </span>
+                                                                                                    </span>
+                                                                                                </p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="ckediting_disabled snippet_block snippet_block_text_twocol bird_sb_bg_blue footerInfoPart">
+                                <table cellpadding="0" cellspacing="0" class="centeringTable">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                       class="flexibleContainer">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center" class="flexibleContainerCell"
+                                                                valign="top">
+                                                                <table border="0" cellpadding="0" cellspacing="0"
+                                                                       class="nestedContainer">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td align="center"
+                                                                                class="nestedContainerCell"
+                                                                                valign="top">
+                                                                                <table border="0" cellpadding="0"
+                                                                                       cellspacing="0"
+                                                                                       class="contentTable">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td class="textContent">
+                                                                                                <table align="left"
+                                                                                                       border="0"
+                                                                                                       cellpadding="0"
+                                                                                                       cellspacing="0"
+                                                                                                       class="flexibleContainerLeft socialMediaIcons">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="center"
+                                                                                                                class="textContent ckediting_enabled"
+                                                                                                                valign="top">
+                                                                                                                <p>
+                                                                                                                    <a href="https://www.facebook.com/BirdLifeOesterreich/"
+                                                                                                                       target="_blank">
+                                                                                                                        <img src="https://www.birdlife.at/fso_website_email_bird/static/src/images/Facebook_Icon.png"/>
+                                                                                                                    </a>&amp;nbsp;<a
+                                                                                                                        href="https://www.instagram.com/birdlife_austria/"
+                                                                                                                        target="_blank">
+                                                                                                                    <img src="https://www.birdlife.at/fso_website_email_bird/static/src/images/Instagram_Icon.png"/>
+                                                                                                                </a>&amp;nbsp;<a
+                                                                                                                        href="https://twitter.com/BirdLifeAustria"
+                                                                                                                        target="_blank">
+                                                                                                                    <img src="https://www.birdlife.at/fso_website_email_bird/static/src/images/Twitter_Icon.png"/>
+                                                                                                                </a>
+                                                                                                                </p>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                &#8203;
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+
+                                                                                                <table align="right"
+                                                                                                       border="0"
+                                                                                                       cellpadding="0"
+                                                                                                       cellspacing="0"
+                                                                                                       class="flexibleContainerRight infoAddressPart">
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td align="center"
+                                                                                                                class="textContent ckediting_enabled"
+                                                                                                                valign="top">
+                                                                                                                <p style="text-align: center;">
+                                                                                                                    <span style="background-color: transparent;">
+                                                                                                                        BirdLife Österreich
+                                                                                                                        <br/>
+                                                                                                                        Museumsplatz 1/10/8
+                                                                                                                        <br/>
+                                                                                                                        1070 Wien
+                                                                                                                        <br/>
+                                                                                                                        ZVR: 093531738
+                                                                                                                        <br/>
+                                                                                                                        +43 (0) 1 5234651
+                                                                                                                        <br/>
+                                                                                                                        <a href="mailto:%20office@birdlife.at">
+                                                                                                                            office@birdlife.at
+                                                                                                                        </a>
+                                                                                                                        <br/>
+                                                                                                                        <a href="https://www.birdlife.at"
+                                                                                                                           target="_blank">
+                                                                                                                            www.birdlife.at
+                                                                                                                        </a>
+                                                                                                                    </span>
+                                                                                                                </p>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+
+</data>
+</openerp>
