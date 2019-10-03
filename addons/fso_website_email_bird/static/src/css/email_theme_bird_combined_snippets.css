@@ -13,4 +13,23 @@
     color: white;
 }
 
+/* --------------- */
+/* SNIPPET OPTIONS */
+/* --------------- */
 
+#combinedsnippetfooter .bird_sb_bg_blue .contentTable,
+#combinedsnippetfooter .bird_sb_bg_blue .flexibleContainer {
+    background-color: #0070ac;
+}
+
+#combinedheadersnippetWebVersion.bird_sb_bg_background .contentTable,
+#combinedheadersnippetWebVersion.bird_sb_bg_background .flexibleContainer {
+    background-color: #f9f9f9;
+}
+/*
+#combinedsnippetfooter .bird_sb_bg_blue .flexibleContainer,
+#combinedsnippetfooter .bird_sb_bg_blue .flexibleContainerCell .nestedContainerCell,
+#combinedsnippetfooter .bird_sb_bg_blue .flexibleContainerCell {
+    background-color: #0070ac;
+}
+*/

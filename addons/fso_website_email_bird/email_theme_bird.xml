@@ -79,6 +79,30 @@
                 <!-- @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');-->
                 <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700' rel='stylesheet' type='text/css' t-ignore="true"/>-->
                 <!-- THEME bird CSS-ASSETS IN EDIT MODE ONLY -->
+                <!-- Office OUTLOOK HACK FÜR CORECTE BILDDARSTELLUNG 2007/2011/2013-->
+ <!--               <![CDATA[
+                    &lt;!&ndash;[if mso]>
+                    <html xmlns:v="urn:schemas-microsoft-com:vml"
+                    xmlns:o="urn:schemas-microsoft-com:office:office"
+                    xmlns:w="urn:schemas-microsoft-com:office:word"
+                    xmlns="http://www.w3.org/TR/REC-html40">
+
+                    <table border=0 cellspacing=0 cellpadding=0 width="88%"
+                     style='width:88.0%;border-collapse:collapse;'>
+                     <tr>
+
+                      <td style='padding:0cm 0cm 0cm 0cm'>
+                        <xml>
+                         <v:rect style='height:33%' o:hr="true" stroke="false">
+                          <v:fill type="frame" src="Imagepath"/>
+                         </v:rect>
+                        </xml>
+                      </td>
+
+                     </tr>
+                    </table>
+                    <![endif]&ndash;&gt;
+                 ]]>-->
                 <t t-if="email_editor_mode">
                     <t t-call-assets="fso_website_email_bird.email_theme_bird_assets_editmode" t-js="false"/>
                 </t>

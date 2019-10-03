@@ -108,12 +108,3 @@
     background-color: #0070ac;
     color: white;
 }
-
-.dadi_sb_fg_pink .flexibleContainerCell .nestedContainerCell,
-.dadi_sb_fg_blue .flexibleContainerCell .nestedContainerCell {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 3px;
-}
