@@ -50,7 +50,7 @@
                                                                                             contenteditable="true">
                                                                                             <p class="bird_tiny"
                                                                                                style="text-align: center;">
-                                                                                                <a id="view-email-in-browser" href="%open_browser%" target="_blank" data-cke-saved-href="%open_Browser%"
+                                                                                                <a id="view-email-in-browser" href="%open_browser%" target="_blank" data-cke-saved-href="%open_browser%"
                                                                                                    style="text-align: center; color: gray; font-weight: 700; font-size: 12px;">
                                                                                                     Zur Webversion
                                                                                                 </a>
@@ -220,11 +220,6 @@
                                                                                                                     <img src="https://www.birdlife.at/fso_website_email_bird/static/src/images/Twitter_Icon.png"/>
                                                                                                                 </a>
                                                                                                                 </p>
-                                                                                                            </td>
-                                                                                                        </tr>
-                                                                                                        <tr>
-                                                                                                            <td>
-                                                                                                                &#8203;
                                                                                                             </td>
                                                                                                         </tr>
                                                                                                     </tbody>
