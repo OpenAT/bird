@@ -42,7 +42,9 @@ auf die Größe des Iframes und nicht auf die darüberliegende Seitengröße.
 /* --------------- */
 /* EXTENDED DESIGN */
 /* --------------- */
-
+#wrapwrap main #wrap[contenteditable='true'] .extended_banner.move-into-header {
+    top: 40px;
+}
 /* Links */
 /*a { text-decoration: underline; }*/
 /*a:hover { background-color: #3f3f3f; }*/
@@ -515,11 +517,15 @@ section div.container div.row div.col-md-6.mt16 em {
     text-align: center;
 }
 
-.ppt_opc #website_sale_donate .oe_price_h4 {
-    width: 20%;
+.product_price {
+    width: fit-content;
     margin: auto;
+}
+.ppt_opc #website_sale_donate .oe_price_h4 {
+    /*width: 20%;*/
+    /*margin: auto;*/
     background-color: white;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     border-radius: 5px;
     padding: 5px;
 }
