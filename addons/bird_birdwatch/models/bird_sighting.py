@@ -36,7 +36,8 @@ class BirdSighting(models.Model):
                     CREATE materialized VIEW {mat_view_name!s} 
                     AS
                         SELECT
-                            bird_species.name as bird_species_name
+                            bs.id as id
+                            ,bird_species.name as bird_species_name
                             ,bird_species.color as bird_species_color
                             ,bs.latitude as latitude
                             ,bs.longitude as longitude
