@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp><data>
+    
+    <!--
+        bird.species
+    -->
+    
+    <!-- FORM VIEW -->
+    <record model="ir.ui.view" id="bird_species_form">
+        <field name="name">bird_species_form</field>
+        <field name="model">bird.species</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Bird Species">
+                <sheet>
+                    <group string="Web Input" name="bird_species_data">
+                        <group name="form_input">
+                            <field name="name"/>
+                            <field name="color" widget="color"/>
+                            <field name="latin_name"/>
+                        </group>
+                        <group string="System Fields" name="computed_system_data">
+                            <field name="id" readonly="True"/>
+                            <field name="create_date" readonly="True"/>
+                            <field name="create_uid" readonly="True"/>
+                            <field name="write_date" readonly="True"/>
+                            <field name="write_uid" readonly="True"/>
+                        </group>
+                    </group>
+                    <group name="species_image">
+                        <field name="image" widget="image" filename="image_name" class="species_image_backend"/>
+                        <field name="image_thumbnail" widget="image" class="oe_avatar"/>
+                    </group>
+                    <notebook>
+                        <sheet string="Image">
+                            <group name="species_image">
+                                <field name="image" widget="image" filename="image_name" class="species_image_backend"/>
+                                <field name="image_thumbnail" widget="image" class="oe_avatar"/>
+                            </group>
+                        </sheet>
+                        <sheet string="Information">
+                            <group name="species_infomration">
+                                <field name="information"/>
+                            </group>
+                        </sheet>
+                        <sheet string="Webpage">
+                            <group name="species_webpage">
+                                <field name="webpage"/>
+                            </group>
+                        </sheet>
+                    </notebook>
+
+                </sheet>
+                <!--<div class="oe_chatter">-->
+                <!--    <field name="message_follower_ids" widget="mail_followers"/>-->
+                <!--    <field name="message_ids" widget="mail_thread"/>-->
+                <!--</div>-->
+            </form>
+        </field>
+    </record>
+    
+    <!-- TREE/LIST VIEW -->
+    <record model="ir.ui.view" id="bird_species_tree">
+        <field name="name">bird_species_tree</field>
+        <field name="model">bird.species</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Bird Species">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="color" widget="color"/>
+                <field name="latin_name"/>
+                <field name="image_thumbnail" widget="image" height="80" display="thumbnail"/>
+                <field name="image_name" invisible="1"/>
+                <field name="information" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+    
+    <!-- SEARCH VIEW -->
+    <record model="ir.ui.view" id="bird_species_search">
+        <field name="name">bird_species_search</field>
+        <field name="model">bird.species</field>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <search string="Bird Species">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="color" widget="color"/>
+                <field name="latin_name"/>
+                <field name="image_name" invisible="1"/>
+                <field name="information" invisible="1"/>
+            </search>
+        </field>
+    </record>
+    
+    <!-- ACTIONS -->
+    <!-- Now we create actions for the new views -->
+    <!-- https://www.odoo.com/de_DE/forum/hilfe-1/question/how-do-you-define-specific-not-default-views-for-each-view-mode-type-form-tree-etc-in-act-window-xml-76275 -->
+    <!-- https://www.odoo.com/de_DE/forum/hilfe-1/question/multiple-create-form-views-same-model-107193 -->
+    <record id="bird_species_action" model="ir.actions.act_window" >
+        <field name="name">Bird Species</field>
+        <field name="res_model">bird.species</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="bird_species_search"/>
+    </record>
+    <record id="bird_species_tree_viewaction" model="ir.actions.act_window.view">
+        <field name="sequence" eval="10"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="bird_species_tree"/>
+        <field name="act_window_id" ref="bird_species_action"/>
+    </record>
+    <record id="bird_species_form_viewaction" model="ir.actions.act_window.view">
+        <field name="sequence" eval="20"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="bird_species_form"/>
+        <field name="act_window_id" ref="bird_species_action"/>
+    </record>
+
+    <!-- MENU -->
+    <!-- And we add the Action to a Menu with the shortcut menuitem -->
+    <menuitem id="bird_species_menu" action="bird_species_action" parent="base.menu_config" sequence="10301"/>
+        
+
+</data></openerp>

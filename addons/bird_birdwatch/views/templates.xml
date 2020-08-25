@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <!--  TODO: danke template - maybe not needed because done with fso_forms ...  -->
+
+        <!--  TODO: Snippet to insert the leaflet map for the bird sightings  -->
+    
+    </data>
+</openerp>

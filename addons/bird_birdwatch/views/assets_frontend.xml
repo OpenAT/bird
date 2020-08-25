@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <!-- LOAD CSS AND JS FOR WEBSITE FRONTEND -->
+        <!-- Load custom js and css -->
+        <template id="assets_frontend" inherit_id="fso_base_website.assets_frontend" name="bird_birdwatch_frontend_assets">
+            <xpath expr="//script[last()]" position="after">
+                
+                <!-- Leaflet library -->
+                <link rel="stylesheet" href='/bird_birdwatch/static/src/lib/leaflet/leaflet.css'/>
+                <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/leaflet-src.js"/>
+
+                <!-- TODO: Leaflet css and js configuration - rewrite this for bird_birdwatch !!! -->
+                <!--<link rel="stylesheet" href='/bird_birdwatch/static/src/css/website_map.css'/>-->
+                <!--<script type="text/javascript" src="/bird_birdwatch/static/src/js/website_map_v5.js"/>-->
+
+                <!-- TODO: Image gallery library fotorama - rewrite this for bird_birdwatch !!! -->
+                <!--<link rel="stylesheet" href='/bird_birdwatch/static/src/lib/fotorama-4.6.4/fotorama.css'/>-->
+                <!--<script type="text/javascript" src="/bird_birdwatch/static/src/lib/fotorama-4.6.4/fotorama.js"/>-->
+
+                <!-- TODO: Image gallery for the leaflet map based on fotorama - rewrite this for bird_birdwatch !!! -->
+                <!--<link rel="stylesheet" href='/bird_birdwatch/static/src/css/website_map_image_gallery.css'/>-->
+                <!--<script type="text/javascript" src="/bird_birdwatch/static/src/js/website_map_image_gallery.js"/>-->
+
+            </xpath>
+        </template>
+
+</data>
+</openerp>

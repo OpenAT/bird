@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_bird_sighting","access_bird_sighting","model_bird_sighting","",1,0,0,0
+"access_bird_sighting_manager","access_bird_sighting_manager","model_bird_sighting","bird_birdwatch.group_bird_sighting_manager",1,1,1,1
+"access_bird_sighting_website","access_bird_sighting_website","model_bird_sighting","base.group_public",1,1,1,0
+"access_bird_species","access_bird_species","model_bird_species","",1,0,0,0
+"access_bird_species_manager","access_bird_species_manager","model_bird_species","bird_birdwatch.group_bird_sighting_manager",1,1,1,1
+"access_bird_species_website","access_bird_species_website","model_bird_species","base.group_public",1,1,1,0

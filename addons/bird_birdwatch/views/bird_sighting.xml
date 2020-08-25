@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp><data>
+    
+    <!--
+        bird.sighting
+    -->
+    
+    <!-- FORM VIEW -->
+    <record model="ir.ui.view" id="bird_sighting_form">
+        <field name="name">bird_sighting_form</field>
+        <field name="model">bird.sighting</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Bird Sightings">
+                <header>
+                    <field name="state" widget="statusbar" clickable="True"/>
+                </header>
+                <sheet>
+                    <group string="Web Input" name="bird_sighting_data">
+                        <group name="form_input">
+                            <field name="bird_species_id"/>
+                            <field name="sighting_date"/>
+                            <field name="bird_count"/>
+                            <field name="latitude"/>
+                            <field name="longitude"/>
+
+                            <!-- sighting observer data (res.partner) -->
+                            <field name="salutation"/>
+                            <field name="firstname"/>
+                            <field name="lastname"/>
+                            <field name="email"/>
+                            <field name="zip"/>
+                            <field name="street"/>
+                            <field name="street_number_web"/>
+                            <field name="city"/>
+                            <field name="country_id" options='{"no_open": True, "no_create": True}'/>
+
+                        </group>
+                        <group string="System Fields" name="computed_system_data">
+                            <field name="partner_id" readonly="True"/>
+                            <field name="login_token_used" readonly="True"/>
+                            <field name="id" readonly="True"/>
+                            <field name="create_date" readonly="True"/>
+                            <field name="create_uid" readonly="True"/>
+                            <field name="write_date" readonly="True"/>
+                            <field name="write_uid" readonly="True"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <sheet string="Image">
+                             <group name="sighting_image">
+                                <field name="image" widget="image" filename="image_name" class="species_image_backend"/>
+                                <field name="image_thumbnail" widget="image" class="oe_avatar"/>
+                            </group>
+                        </sheet>
+                        <sheet string="Information">
+                            <group>
+                                <field name="information"/>
+                            </group>
+                        </sheet>
+                    </notebook>
+
+                </sheet>
+                <!--<div class="oe_chatter">-->
+                <!--    <field name="message_follower_ids" widget="mail_followers"/>-->
+                <!--    <field name="message_ids" widget="mail_thread"/>-->
+                <!--</div>-->
+            </form>
+        </field>
+    </record>
+    
+    <!-- TREE/LIST VIEW -->
+    <record model="ir.ui.view" id="bird_sighting_tree">
+        <field name="name">bird_sighting_tree</field>
+        <field name="model">bird.sighting</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Bird Sightings">
+                <field name="id"/>
+
+                <field name="bird_species_id"/>
+                <field name="sighting_date"/>
+                <field name="bird_count"/>
+
+                <field name="salutation" invisible="1"/>
+                <field name="firstname"/>
+                <field name="lastname"/>
+                <field name="email"/>
+                <field name="zip" invisible="1"/>
+                <field name="street" invisible="1"/>
+                <field name="street_number_web" invisible="1"/>
+                <field name="city"/>
+                <field name="country_id"/>
+
+                <field name="partner_id"/>
+
+                <field name="image_thumbnail" widget="image" height="80" display="thumbnail"/>
+
+                <field name="create_date"/>
+                <field name="write_date" invisible="1"/>
+
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    
+    <!-- SEARCH VIEW -->
+    <record model="ir.ui.view" id="bird_sighting_search">
+        <field name="name">bird_sighting_search</field>
+        <field name="model">bird.sighting</field>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <search string="Bird Sightings">
+
+                <field name="bird_species_id"/>
+                <field name="sighting_date"/>
+
+                <field name="salutation" invisible="1"/>
+                <field name="firstname"/>
+                <field name="lastname"/>
+                <field name="email"/>
+                <field name="zip" invisible="1"/>
+                <field name="street" invisible="1"/>
+                <field name="street_number_web" invisible="1"/>
+                <field name="city"/>
+                <field name="country_id"/>
+
+                <field name="partner_id" readonly="True"/>
+
+                <group string="Group by">
+                    <filter string="Species" context="{'group_by':'bird_species_id'}"/>
+                    <filter string="Sighting Date" context="{'group_by':'sighting_date'}"/>
+                    <filter string="City" context="{'group_by':'city'}"/>
+                    <filter string="Country" context="{'group_by':'country_id'}"/>
+                    <filter string="Create-Date" context="{'group_by':'create_date'}"/>
+                    <filter string="Write-Date" context="{'group_by':'write_date'}"/>
+                    <filter string="Partner" context="{'group_by':'partner_id'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- Graph View -->
+    <record id="bird_sighting_graph" model="ir.ui.view">
+        <field name="name">bird_sighting_graph</field>
+        <field name="model">bird.sighting</field>
+        <field name="arch" type="xml">
+            <graph string="Garden Analysis" type="pivot" stacked="True">
+                <field name="bird_species_id" type="row"/>
+                <field name="sighting_date" interval="month" type="col"/>
+                <field name="bird_count" type="measure"/>
+            </graph>
+        </field>
+    </record>
+    
+    <!-- ACTIONS -->
+    <!-- Now we create actions for the new views -->
+    <!-- https://www.odoo.com/de_DE/forum/hilfe-1/question/how-do-you-define-specific-not-default-views-for-each-view-mode-type-form-tree-etc-in-act-window-xml-76275 -->
+    <!-- https://www.odoo.com/de_DE/forum/hilfe-1/question/multiple-create-form-views-same-model-107193 -->
+    <record id="bird_sighting_action" model="ir.actions.act_window" >
+        <field name="name">Bird Sightings</field>
+        <field name="res_model">bird.sighting</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="bird_sighting_search"/>
+    </record>
+    <record id="bird_sighting_tree_viewaction" model="ir.actions.act_window.view">
+        <field name="sequence" eval="10"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="bird_sighting_tree"/>
+        <field name="act_window_id" ref="bird_sighting_action"/>
+    </record>
+    <record id="bird_sighting_form_viewaction" model="ir.actions.act_window.view">
+        <field name="sequence" eval="20"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="bird_sighting_form"/>
+        <field name="act_window_id" ref="bird_sighting_action"/>
+    </record>
+    <record id="bird_sighting_graph_viewaction" model="ir.actions.act_window.view">
+        <field name="sequence" eval="30"/>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="bird_sighting_graph"/>
+        <field name="act_window_id" ref="bird_sighting_action"/>
+    </record>
+    <!-- MENU -->
+    <!-- And we add the Action to a Menu with the shortcut menuitem -->
+    <menuitem id="bird_sighting_menu" action="bird_sighting_action" parent="base.menu_config" sequence="10301"/>
+        
+
+</data></openerp>

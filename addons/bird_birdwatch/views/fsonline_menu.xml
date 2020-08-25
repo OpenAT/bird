@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- ============ -->
+        <!-- FSO CHANNELS -->
+        <!-- ============ -->
+            <!-- Birdwatch -->
+            <menuitem id="bird_birdwatch_channel" name="Bird Sightings" groups="base.group_user" parent="fso_base.menu_channels" sequence="10300"/>
+                <menuitem id="bird_species_menu" action="bird_species_action" parent="bird_birdwatch_channel" sequence="10310"/>
+                <menuitem id="bird_sighting_menu" action="bird_sighting_action" parent="bird_birdwatch_channel" sequence="10320"/>
+  
+    </data>
+</openerp>
