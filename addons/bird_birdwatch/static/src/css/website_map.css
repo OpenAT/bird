@@ -1,10 +1,6 @@
-/* ---------- */
-/* GARDEN MAP */
-/* ---------- */
-#gardenMap {
+#bird_birdwatch_map {
     height: 600px;
     background: white;
-    /*position: relative;*/
 }
 
 /* remove svg styles from web_graph addon for leaflet.js */
@@ -34,93 +30,11 @@
     background-color: transparent;
 }
 
-/* hack for control container */
-.leaflet-left {
-    left: unset;
-    right: 10px;
-}
-
-
-/* -------- */
-/*  Marker  */
-/* -------- */
-.gardenMapMarkerIcon {
-    width: 60px;
-    font-family: "Nunito Sans", "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
-}
-
-
-.gardenMapCommunityMaker {
-    width: max-content;
-    text-align: center;
-    font-family: "Nunito Sans", "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
-    position: absolute;
-    min-width: 130px;
-}
-
-.gardenMapCommunityMaker .gardenMapCommunityMakerOuter {
-    width: max-content;
-    margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    left: -60px;
-}
-
-.gardenMapCommunityMakerImg {
-    width: 60px;
-}
-
-.gardenMapCommunityMakerText {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 auto;
-    color: #3c3c3b;
-    width: max-content;
-    min-width: 130px;
-}
-
-
-/* -------- */
-/* INFO BOX */
-/* -------- */
-#gardenMapInfoBox {
-    position: absolute;
-    top: 28px;
-    left: 28px;
-    z-index: 540;
-    background: transparent;
-    border: none;
-    width: 175px;
-    font-family: 'Rubik', "Nunito Sans", "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 900;
-}
-
-#gardenMapInfoBox .totalgardensize {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-}
-
-#gardenMapInfoBox .totalgardensize img.gardenMapInfoBoxBg {
-    width: 100%;
-}
-
-#gardenMapInfoBox .totalgardensize .gardenMapInfoBoxText {
-    position: absolute;
-    top: 11px;
-    z-index: 545;
-    width: 100%;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: #76b837;
-}
-
 /* ------------- */
 /* MEDIA QUERIES */
 /* ------------- */
 @media (max-width: 768px) {
-    #gardenMap {
+    #bird_birdwatch_map {
         height: 400px;
     }
 

@@ -9,11 +9,17 @@
                 
                 <!-- Leaflet library -->
                 <link rel="stylesheet" href='/bird_birdwatch/static/src/lib/leaflet/leaflet.css'/>
+                <link rel="stylesheet" href='/bird_birdwatch/static/src/lib/leaflet/MarkerCluster.css'/>
+                <link rel="stylesheet" href='/bird_birdwatch/static/src/lib/leaflet/MarkerCluster.Default.css'/>
+                <link rel="stylesheet" href='/bird_birdwatch/static/src/lib/leaflet/geosearch.css'/>
                 <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/leaflet-src.js"/>
+                <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/leaflet.markercluster.js"/>
+                <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/leaflet.featuregroup.subgroup.js"/>
+                <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/geosearch.umd.js"/>
 
                 <!-- TODO: Leaflet css and js configuration - rewrite this for bird_birdwatch !!! -->
-                <!--<link rel="stylesheet" href='/bird_birdwatch/static/src/css/website_map.css'/>-->
-                <!--<script type="text/javascript" src="/bird_birdwatch/static/src/js/website_map_v5.js"/>-->
+                <link rel="stylesheet" href='/bird_birdwatch/static/src/css/website_map.css'/>
+                <script type="text/javascript" src="/bird_birdwatch/static/src/js/website_map_v5.js"/>
 
                 <!-- TODO: Image gallery library fotorama - rewrite this for bird_birdwatch !!! -->
                 <!--<link rel="stylesheet" href='/bird_birdwatch/static/src/lib/fotorama-4.6.4/fotorama.css'/>-->

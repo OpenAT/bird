@@ -196,7 +196,7 @@ class BirdSighting(models.Model):
 
         # Create and link a res.partner
         if 'partner_id' not in vals:
-            boolean_result.create_update_partner()
+            self.create_update_partner()
 
         # Update materialized view
         if boolean_result:
