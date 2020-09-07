@@ -85,9 +85,6 @@ $(document).ready(function () {
             collapsed: false,
             position:'topright'
         });
-        zoomControl = L.control.zoom({
-             position:'topleft'
-        });
 
         var cornerTop = L.latLng(49.029, 9.225),
             cornerBottom = L.latLng(46.284, 17.185),
@@ -96,10 +93,10 @@ $(document).ready(function () {
         gardenMap = L.map('bird_birdwatch_map', {
             center: [47.564, 13.364],
             zoom: 7,
-            zoomControl: false,
+            zoomControl: true,
             maxBounds: boundary,
         });
-        zoomControl.addTo(gardenMap);
+
         mapControl.addTo(gardenMap);
 
         gardenMap.addControl(new GeoSearch.GeoSearchControl({
@@ -134,7 +131,14 @@ $(document).ready(function () {
             new_marker = null;
         }
         // Add new clicked_marker
-        new_marker = L.marker(e.latlng, {icon: greenIcon}).addTo(gardenMap);
+        var marker_color = "green";
+        new_marker = L.marker(e.latlng, {icon: new L.DivIcon.SVGIcon({
+            fillOpacity: 1,
+            circleColor: marker_color,
+            color: marker_color,
+            fillColor: marker_color,
+            fontColor: marker_color,
+        })}).addTo(gardenMap);
         // Fill the form fields with lng and lat values
         $('#longitude').val(e.latlng.lng);
         $('#latitude').val(e.latlng.lat);
@@ -174,7 +178,21 @@ $(document).ready(function () {
             bird_sights_by_species[specie].forEach(function(bird_sight){
                 var longitude = bird_sight.longitude;
                 var latitude = bird_sight.latitude;
-                var marker = L.marker([latitude, longitude]);
+                var marker_color = bird_sight.bird_species_color;
+                var marker = L.marker([latitude, longitude],  { icon: new L.DivIcon.SVGIcon({
+                    fillOpacity: 1,
+                    circleColor: marker_color,
+                    color: marker_color,
+                    fillColor: marker_color,
+                    fontColor: marker_color,
+                }) });
+//                var marker = new L.Marker.SVGMarker([latitude, longitude], { iconOptions: {
+//                    fillOpacity: 1,
+//                    circleColor: marker_color,
+//                    color: marker_color,
+//                    fillColor: marker_color,
+//                    fontColor: marker_color,
+//                }});
                 marker.id = bird_sight.id;
                 marker.bindPopup("<div>Sichtungen: "+bird_sight.bird_count+"</div><div>Lade Bild...</div>");
                 marker.on('click', onMarkerClick);
