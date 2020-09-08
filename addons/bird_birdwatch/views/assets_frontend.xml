@@ -16,6 +16,7 @@
                 <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/leaflet.markercluster.js"/>
                 <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/leaflet.featuregroup.subgroup.js"/>
                 <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/geosearch.umd.js"/>
+                <script type="text/javascript" src="/bird_birdwatch/static/src/lib/leaflet/svg-icon.js"/>
 
                 <!-- TODO: Leaflet css and js configuration - rewrite this for bird_birdwatch !!! -->
                 <link rel="stylesheet" href='/bird_birdwatch/static/src/css/website_map.css'/>
