@@ -25,7 +25,7 @@
                             <field name="longitude"/>
 
                             <!-- sighting observer data (res.partner) -->
-                            <field name="salutation"/>
+                            <field name="gender"/>
                             <field name="firstname"/>
                             <field name="lastname"/>
                             <field name="email"/>
@@ -34,6 +34,9 @@
                             <field name="street_number_web"/>
                             <field name="city"/>
                             <field name="country_id" options='{"no_open": True, "no_create": True}'/>
+                            <field name="newsletter"/>
+                            <field name="title_web"/>
+                            <field name="salutation"/>
 
                         </group>
                         <group string="System Fields" name="computed_system_data">
@@ -47,19 +50,28 @@
                         </group>
                     </group>
                     <notebook>
-                        <sheet string="Image">
+                        <page string="Info and Questions">
+                             <group name="info_questions">
+                                 <field name="infowunsch"/>
+                                 <field name="question_1"/>
+                                 <field name="question_2"/>
+                                 <field name="question_3"/>
+                                 <field name="question_4"/>
+                                 <field name="question_5"/>
+                            </group>
+                        </page>
+                        <page string="Sighting Image">
                              <group name="sighting_image">
                                 <field name="image" widget="image" filename="image_name" class="species_image_backend"/>
                                 <field name="image_thumbnail" widget="image" class="oe_avatar"/>
                             </group>
-                        </sheet>
-                        <sheet string="Information">
+                        </page>
+                        <page string="Extra Sighting Information">
                             <group>
                                 <field name="information"/>
                             </group>
-                        </sheet>
+                        </page>
                     </notebook>
-
                 </sheet>
                 <!--<div class="oe_chatter">-->
                 <!--    <field name="message_follower_ids" widget="mail_followers"/>-->
@@ -91,6 +103,7 @@
                 <field name="street_number_web" invisible="1"/>
                 <field name="city"/>
                 <field name="country_id"/>
+                <field name="newsletter"/>
 
                 <field name="partner_id"/>
 

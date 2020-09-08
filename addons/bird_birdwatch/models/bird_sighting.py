@@ -93,6 +93,25 @@ class BirdSighting(models.Model):
     country_id = fields.Many2one(string="Country", comodel_name="res.country",
                                  default=lambda self: self._default_country(), domain=False,
                                  track_visibility='onchange')
+    # extra partner fields
+    newsletter = fields.Boolean(string="Newsletter", help="Subscribe for the Newsletter")
+    gender = fields.Selection(string="Gender", selection=[
+        ('male', 'Herr'),
+        ('female', 'Frau'),
+        ('other', 'Andere'),
+    ])
+    title_web = fields.Char(string='Title Web')
+
+    # EXTRA FIELDS
+    infowunsch = fields.Text(string="Infowunsch")
+    question_1 = fields.Text(string="Frage 1")
+    question_2 = fields.Text(string="Frage 2")
+    question_3 = fields.Text(string="Frage 3")
+    question_4 = fields.Text(string="Frage 4")
+    question_5 = fields.Text(string="Frage 5")
+
+    # TODO: CDS-Record-Partner-Origin
+
 
     # Created / Linked res.partner
     # TODO: Inverse field
@@ -144,7 +163,7 @@ class BirdSighting(models.Model):
             # Partner values
             # ATTENTION: newsletter will not be transfered!
             partner_vals = {
-                # TODO: salutation
+                # TODO: salutation, and CDS-Record-Partner-Origin
                 'email': r.email,
                 'firstname': r.firstname,
                 'lastname': r.lastname,
@@ -153,6 +172,10 @@ class BirdSighting(models.Model):
                 'street_number_web': r.street_number_web,
                 'city': r.city,
                 'country_id': r.country_id.id if r.country_id else False,
+                # extra fields
+                'newsletter': r.newsletter,
+                'gender': r.gender if r.gender else False,
+                'title_web': r.title_web,
             }
             # Update partner
             if r.partner_id:
