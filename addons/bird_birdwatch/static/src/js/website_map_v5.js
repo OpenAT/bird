@@ -122,6 +122,8 @@ $(document).ready(function () {
 
         gardenMap.on('click', onMapClick);
         createMarker();
+        var selectionBoundings = [[48.357617832867874, 16.677246093750004], [48.08312505300115, 16.08261108398438]];
+        gardenMap.fitBounds(selectionBoundings);
     }
 
     function onMapClick(e) {
@@ -140,8 +142,8 @@ $(document).ready(function () {
             fontColor: marker_color,
         })}).addTo(gardenMap);
         // Fill the form fields with lng and lat values
-        $('#longitude').val(e.latlng.lng);
-        $('#latitude').val(e.latlng.lat);
+        $('#longitude').val(e.latlng.lng.toLocaleString('de', {maximumFractionDigits: 20}));
+        $('#latitude').val(e.latlng.lat.toLocaleString('de', {maximumFractionDigits: 20}));
     }
 
     function onMarkerClick(e){
