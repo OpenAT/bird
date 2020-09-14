@@ -176,6 +176,7 @@ class BirdSighting(models.Model):
                 'newsletter': r.newsletter,
                 'gender': r.gender if r.gender else False,
                 'title_web': r.title_web,
+                'frst_zverzeichnis_id': 901989, # Dirty temporary hack to have CDS Origin
             }
             # Update partner
             if r.partner_id:
