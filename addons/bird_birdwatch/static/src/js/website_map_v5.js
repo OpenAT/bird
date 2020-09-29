@@ -196,7 +196,7 @@ $(document).ready(function () {
 //                    fontColor: marker_color,
 //                }});
                 marker.id = bird_sight.id;
-                marker.bindPopup("<div>Sichtungen: "+bird_sight.bird_count+"</div><div>Lade Bild...</div>");
+                marker.bindPopup("<div>Anzahl: "+bird_sight.bird_count+"</div><div>Lade Bild...</div>");
                 marker.on('click', onMarkerClick);
                 marker.addTo(group);
             });
