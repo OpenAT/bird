@@ -110,6 +110,10 @@ class BirdSighting(models.Model):
     question_4 = fields.Text(string="Frage 4")
     question_5 = fields.Text(string="Frage 5")
 
+    # Connect to survey addon
+    survey_id = fields.Many2one('survey.survey', 'Survey', readonly=True, ondelete='restrict')
+    survey_user_input_id = fields.Many2one('survey.user_input', 'Survey User Input', readonly=True, ondelete='restrict')
+
     # TODO: CDS-Record-Partner-Origin
 
 
@@ -176,8 +180,18 @@ class BirdSighting(models.Model):
                 'newsletter': r.newsletter,
                 'gender': r.gender if r.gender else False,
                 'title_web': r.title_web,
-                'frst_zverzeichnis_id': 1926, # Dirty temporary hack to have CDS Origin
             }
+
+            # !!! Dirty temporary hack to have a CDS Origin for all partners created from bird sightings !!!
+            # TODO: Allow to set the frst_zverzeichnis_id e.g. through the fso_form field by default value
+            # TODO ATTENTION: No clue why i used an odoo id here and not use the frst id or name of the cds record?!?
+            default_cds = 1926
+            if self.env['frst.zverzeichnis'].sudo().browse([default_cds]).exists():
+                partner_vals['frst_zverzeichnis_id'] = default_cds
+            else:
+                logger.error('bird.sighting: Default bird sighting frst.zverzeichnis with id %s does not exist!'
+                             '' % default_cds)
+
             # Update partner
             if r.partner_id:
                 r.partner_id.sudo().write(partner_vals)
@@ -189,6 +203,24 @@ class BirdSighting(models.Model):
                 partner_obj_su = self.env['res.partner'].sudo()
                 partner = partner_obj_su.create(partner_vals)
                 r.write({'partner_id': partner.id})
+
+    @api.multi
+    def link_survey_user_input(self):
+        for r in self:
+
+            # Survey user input exist already
+            if r.survey_user_input_id:
+                assert r.survey_user_input_id.partner_id.id == r.partner_id.id, _(
+                    "Survey partner must match sighting partner! (sighting id %s)" % r.id)
+                continue
+
+            # Create and link a survey user input
+            if r.survey_id and r.partner_id:
+                survey_user_input = self.env['survey.user_input'].sudo().create({
+                    'survey_id': r.survey_id.id,
+                    'partner_id': r.partner_id.id
+                })
+                r.write({'survey_user_input_id': survey_user_input.id})
 
     @api.model
     def refresh_materialized_views(self):
@@ -208,6 +240,10 @@ class BirdSighting(models.Model):
         if 'partner_id' not in vals:
             record.create_update_partner()
 
+        # Create and link a survey user input
+        if 'survey_user_input_id' not in vals:
+            record.link_survey_user_input()
+
         # Update materialized view
         record.refresh_materialized_views()
 
@@ -221,6 +257,10 @@ class BirdSighting(models.Model):
         # Create and link a res.partner
         if 'partner_id' not in vals:
             self.create_update_partner()
+
+        # Create and link a survey user input
+        if 'survey_user_input_id' not in vals:
+            self.link_survey_user_input()
 
         # Update materialized view
         if boolean_result:

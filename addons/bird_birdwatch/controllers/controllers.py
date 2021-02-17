@@ -82,3 +82,16 @@ class BirdWatchFsoForms(FsoForms):
                     return approved_records
 
         return records
+
+    # Redirect to the survey if linked to one!
+    # HINT: The survey_user_input record is created at bird.sighting create() by link_survey_user_input()
+    #       At this point in the fso form the record must exist already!
+    def _redirect_after_form_submit(self, form, record, forced_redirect_url='', forced_redirect_target=''):
+        if record and record._name == 'bird.sighting' and not forced_redirect_url:
+            if record.survey_user_input_id:
+                user_input = record.survey_user_input_id
+                forced_redirect_url = '/survey/fill/%s/%s' % (user_input.survey_id.id, user_input.token)
+
+        return super(BirdWatchFsoForms, self)._redirect_after_form_submit(form, record,
+                                                                          forced_redirect_url=forced_redirect_url,
+                                                                          forced_redirect_target=forced_redirect_target)
