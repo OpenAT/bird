@@ -111,7 +111,7 @@ $(document).ready(function () {
         var austria_bounds = [[46.35877, 8.782379], [49.037872, 17.189532]];
 
         var BasemapAT_highdpi = L.tileLayer('https://maps{s}.wien.gv.at/basemap/bmaphidpi/normal/google3857/{z}/{y}/{x}.{format}', {
-            maxZoom: 17,
+            maxZoom: 19,
             minZoom: 7,
             attribution: 'Datenquelle: <a href="https://www.basemap.at">basemap.at</a>',
             subdomains: ["", "1", "2", "3", "4"],
