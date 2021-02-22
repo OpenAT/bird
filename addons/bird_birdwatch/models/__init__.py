@@ -18,3 +18,5 @@
 
 from . import bird_species
 from . import bird_sighting
+from . import survey_survey
+from . import survey_user_input

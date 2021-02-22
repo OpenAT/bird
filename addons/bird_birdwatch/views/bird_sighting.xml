@@ -51,7 +51,11 @@
                     </group>
                     <notebook>
                         <page string="Info and Questions">
-                             <group name="info_questions">
+                            <group string="Umfrage" name="survey">
+                                 <field name="survey_id"/>
+                                 <field name="survey_user_input_id"/>
+                            </group>
+                             <group string="Zusatzfelder" name="info_questions">
                                  <field name="infowunsch"/>
                                  <field name="question_1"/>
                                  <field name="question_2"/>

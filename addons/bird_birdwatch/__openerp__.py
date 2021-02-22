@@ -49,6 +49,8 @@ TODO:
         'web_widget_color',
         'fso_base_website',
         'fso_forms',
+        'survey_snippet_areas',
+        'survey_thank_you_page',
     ],
     'data': [
         'security/birdwatch_usergroups.xml',
