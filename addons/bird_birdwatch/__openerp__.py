@@ -51,6 +51,7 @@ TODO:
         'fso_forms',
         'survey_snippet_areas',
         'survey_thank_you_page',
+        'fso_frst_cds',
     ],
     'data': [
         'security/birdwatch_usergroups.xml',

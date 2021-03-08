@@ -101,6 +101,12 @@ class BirdSighting(models.Model):
         ('other', 'Andere'),
     ])
     title_web = fields.Char(string='Title Web')
+    frst_zverzeichnis_id = fields.Many2one(string="CDS Origin",
+                                           comodel_name='frst.zverzeichnis',
+                                           domain=[('verzeichnistyp_id', '=', False)],
+                                           readonly=True,
+                                           ondelete='set null',
+                                           help="Ursprungsaktion for the res.partner created by the sighting!",)
 
     # EXTRA FIELDS
     infowunsch = fields.Text(string="Infowunsch")
@@ -114,15 +120,22 @@ class BirdSighting(models.Model):
     survey_id = fields.Many2one('survey.survey', 'Survey', readonly=True, ondelete='restrict')
     survey_user_input_id = fields.Many2one('survey.user_input', 'Survey User Input', readonly=True, ondelete='restrict')
 
-    # TODO: CDS-Record-Partner-Origin
-
-
     # Created / Linked res.partner
     # TODO: Inverse field
     partner_id = fields.Many2one(string="Partner", comodel_name="res.partner", track_visibility='onchange')
 
     # Login (token/fstoken) information
     login_token_used = fields.Char("Login Token", readonly=True)
+
+    # ----------
+    # Constrains
+    # ----------
+    @api.constrains('frst_zverzeichnis_id')
+    def constrain_frst_zverzeichnis_id(self):
+        for r in self:
+            if r.frst_zverzeichnis_id:
+                assert not r.frst_zverzeichnis_id.verzeichnistyp_id, "Sie koennen die Vogelsichtung nicht mit einem" \
+                                                                     "CDS-Ordner verknüpfen!"
 
     # --------
     # Defaults
@@ -167,7 +180,6 @@ class BirdSighting(models.Model):
             # Partner values
             # ATTENTION: newsletter will not be transfered!
             partner_vals = {
-                # TODO: salutation, and CDS-Record-Partner-Origin
                 'email': r.email,
                 'firstname': r.firstname,
                 'lastname': r.lastname,
@@ -180,17 +192,18 @@ class BirdSighting(models.Model):
                 'newsletter': r.newsletter,
                 'gender': r.gender if r.gender else False,
                 'title_web': r.title_web,
+                # CDS Origin
+                'frst_zverzeichnis_id': r.frst_zverzeichnis_id.id if r.frst_zverzeichnis_id else False,
             }
 
-            # !!! Dirty temporary hack to have a CDS Origin for all partners created from bird sightings !!!
-            # TODO: Allow to set the frst_zverzeichnis_id e.g. through the fso_form field by default value
-            # TODO ATTENTION: No clue why i used an odoo id here and not use the frst id or name of the cds record?!?
-            default_cds = 1926
-            if self.env['frst.zverzeichnis'].sudo().browse([default_cds]).exists():
-                partner_vals['frst_zverzeichnis_id'] = default_cds
-            else:
-                logger.error('bird.sighting: Default bird sighting frst.zverzeichnis with id %s does not exist!'
-                             '' % default_cds)
+            # ADD Default res.partner CD's entry to keep former behaviour
+            if not partner_vals['frst_zverzeichnis_id']:
+                default_cds = 1926
+                if self.env['frst.zverzeichnis'].sudo().browse([default_cds]).exits():
+                    partner_vals['frst_zverzeichnis_id'] = default_cds
+                else:
+                    logger.error('bird.sighting: Default bird sighting frst.zverzeichnis with id %s does not exist!'
+                                 '' % default_cds)
 
             # Update partner
             if r.partner_id:

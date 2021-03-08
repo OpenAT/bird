@@ -37,6 +37,7 @@
                             <field name="newsletter"/>
                             <field name="title_web"/>
                             <field name="salutation"/>
+                            <field name="frst_zverzeichnis_id" options='{"no_open": True, "no_create": True}'/>
 
                         </group>
                         <group string="System Fields" name="computed_system_data">
