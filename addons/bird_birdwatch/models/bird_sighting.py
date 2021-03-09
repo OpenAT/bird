@@ -199,7 +199,7 @@ class BirdSighting(models.Model):
             # ADD Default res.partner CD's entry to keep former behaviour
             if not partner_vals['frst_zverzeichnis_id']:
                 default_cds = 1926
-                if self.env['frst.zverzeichnis'].sudo().browse([default_cds]).exits():
+                if self.env['frst.zverzeichnis'].sudo().browse([default_cds]).exists():
                     partner_vals['frst_zverzeichnis_id'] = default_cds
                 else:
                     logger.error('bird.sighting: Default bird sighting frst.zverzeichnis with id %s does not exist!'
