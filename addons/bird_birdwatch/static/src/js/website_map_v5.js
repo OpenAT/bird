@@ -44,13 +44,23 @@ $(document).ready(function () {
     // Get all data from the /gl2k/garden/data json-controller and initialize the map
     try {
         var url = "/bird/sighting/data";
-        if ( $( "#bird_birdwatch_map" ).length ) {
+        var mapElement = $( "#bird_birdwatch_map" );
+        if ( mapElement.length ) {
+            var speciesId = mapElement.attr("data-fso-species-id");
+            var queryParams = JSON.stringify({"params": {}});
+
+            if (speciesId) {
+                queryParams = JSON.stringify({"params": {
+                    "species_id": speciesId
+                }});
+            }
+
             $.ajax({
                 url: url,
                 type: 'POST',
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
-                data: JSON.stringify({"params": {}}),
+                data: queryParams,
 
                 // request error
                 error: function (data) {

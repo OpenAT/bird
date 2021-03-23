@@ -31,10 +31,13 @@ FS-Online collect and visualize bird sightings
 - Thank you page
 
 USAGE:
+
 - create an fso_form for the data input or add bird.sighting records directly
 - Add one or more odoo webpage(s) a div with the id 'bird_birdwatch_map' <div id='bird_birdwatch_map'></div> to place the leaflet map on the page
+- Optionally the div can have an attribute 'data-fso-species-id' containing a valid bird species id
 
 TODO:
+
 - rework the leaflet java scrip and css code
 - rework the image gallery code or use an other image gallery
 
