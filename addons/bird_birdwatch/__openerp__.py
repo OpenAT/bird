@@ -34,7 +34,7 @@ USAGE:
 
 - create an fso_form for the data input or add bird.sighting records directly
 - Add one or more odoo webpage(s) a div with the id 'bird_birdwatch_map' <div id='bird_birdwatch_map'></div> to place the leaflet map on the page
-- Optionally the div can have an attribute 'data-fso-species-id' containing a valid bird species id
+- Optionally the div can have an attribute 'data-fso-species-id' containing one or more comma separated species IDs (e.g. 2,3,4)
 
 TODO:
 

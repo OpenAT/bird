@@ -51,7 +51,7 @@ $(document).ready(function () {
 
             if (speciesId) {
                 queryParams = JSON.stringify({"params": {
-                    "species_id": speciesId
+                    "species_id": `${speciesId}`
                 }});
             }
 

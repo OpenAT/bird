@@ -36,21 +36,19 @@ class BirdWatch(http.Controller):
         species_param = post.get("species_id")
 
         query = "SELECT json_agg(bird_sighting_mat_view) FROM bird_sighting_mat_view"
-        query_params = {}
 
         if species_param:
             # If bird species was specified, modify query, and add
             # query parameter
             _logger.debug("Limiting bird species to id %s" % species_param)
-            query = query + " WHERE bird_species_id = %(species_id)s"
-            query_params = {
-                "species_id": int(species_param)
-            }
+            # Map ID list to int array to ensure no string injection
+            species_id_list = map(int, species_param.split(","))
+            query = query + " WHERE bird_species_id IN (%s)" % ",".join(map(str, species_id_list))
 
         query = query + ";"
 
         # Get the bird sightings
-        cr.execute(query, query_params)
+        cr.execute(query)
         bird_sightings = cr.fetchone()
 
         # HINT: For http.Controller of type 'json' the return object will be automatically converted to a json string
