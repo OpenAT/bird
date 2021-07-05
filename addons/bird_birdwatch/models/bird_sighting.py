@@ -178,7 +178,6 @@ class BirdSighting(models.Model):
                 continue
 
             # Partner values
-            # ATTENTION: newsletter will not be transfered!
             partner_vals = {
                 'email': r.email,
                 'firstname': r.firstname,
@@ -189,12 +188,16 @@ class BirdSighting(models.Model):
                 'city': r.city,
                 'country_id': r.country_id.id if r.country_id else False,
                 # extra fields
-                'newsletter': r.newsletter,
+                'newsletter': r.newsletter,     # ATTENTION: newsletter_web is used by fson (see below)
                 'gender': r.gender if r.gender else False,
                 'title_web': r.title_web,
                 # CDS Origin
                 'frst_zverzeichnis_id': r.frst_zverzeichnis_id.id if r.frst_zverzeichnis_id else False,
             }
+
+            # Only allow to subscribe to the FRST newsletter but not to unsubscribe from the regular newsletter
+            if r.newsletter:
+                partner_vals['newsletter_web'] = r.newsletter
 
             # ADD Default res.partner CD's entry to keep former behaviour
             if not partner_vals['frst_zverzeichnis_id']:

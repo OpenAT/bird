@@ -45,6 +45,7 @@ $(document).ready(function () {
     try {
         var url = "/bird/sighting/data";
         if ( $( "#bird_birdwatch_map" ).length ) {
+            // TODO Hole infos vom Element und änder anfrageurl entspr
             $.ajax({
                 url: url,
                 type: 'POST',
