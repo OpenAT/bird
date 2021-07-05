@@ -37,6 +37,7 @@ class BirdSighting(models.Model):
                     AS
                         SELECT
                             bs.id as id
+                            ,bird_species.id as bird_species_id
                             ,bird_species.name as bird_species_name
                             ,bird_species.color as bird_species_color
                             ,bs.latitude as latitude
