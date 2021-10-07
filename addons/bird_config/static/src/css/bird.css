@@ -408,10 +408,11 @@ main .container img {
 }
 
 header a.navbar-brand img {
-    max-height: 90px !important;
+    max-height: 140px !important;
+    filter: drop-shadow(2px 3px 5px #000);
 }
 header a.navbar-brand img {
-    margin-top: 10px;
+    margin-top: 0px;
 }
     #popupbox .container.popup_box {
     background: transparent;
