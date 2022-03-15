@@ -628,3 +628,40 @@ body[data-catid="2"] .ppt_opc #wsd_checkout_form > div > h3:after {
 body[data-rootcatid="4"] .webshop_download_file {
     display: none;
 }
+
+/* Bird Portrait Snippet */
+@media (max-width: 768px) {
+  .oe_img_bg {
+  background-size: cover !important;
+}
+}
+
+/* gso group box */
+/* Snippet Structure Group */
+.snippet_structure_group .snippet_structure_group_inner {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  /* default BG Color for new structure */
+}
+
+
+.gso_bgcol_birdgrey .snippet_structure_group_outer {
+  background-color: rgba(128, 128, 128, 0.31);
+  color: white;
+}
+
+.gso_fgcol_birdgrey .snippet_structure_group_inner {
+  background-color: rgba(128, 128, 128, 0.31);
+  color: white;
+}
+/* Snippet Content Group */
+/* default BG Color for new structure */
+.gso_bgcol_birdgrey .snippet_content_group_outer {
+  background-color: rgba(128, 128, 128, 0.31);
+  color: white;
+}
+.gso_fgcol_birdgrey .snippet_content_group_inner {
+  background-color: rgba(128, 128, 128, 0.31);
+  color: white;
+}
