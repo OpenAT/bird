@@ -2,6 +2,21 @@
 /* BOOTSTRAP FIXES */
 /* --------------- */
 
+/* Cookie notice */
+#website_cookie_notice {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00669e!important;
+    overflow: hidden;
+    z-index: 9001;
+}
+
+.bg-warning {
+    color: white;
+    border: 1px solid white;
+}
 
 main .container {
     width: 100%;
