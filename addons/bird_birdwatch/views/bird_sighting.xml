@@ -114,6 +114,9 @@
 
                 <field name="image_thumbnail" widget="image" height="80" display="thumbnail"/>
 
+                <field name="latitude"/>
+                <field name="longitude"/>
+
                 <field name="create_date"/>
                 <field name="write_date" invisible="1"/>
 
