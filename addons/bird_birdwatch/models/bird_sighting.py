@@ -117,6 +117,17 @@ class BirdSighting(models.Model):
     question_4 = fields.Text(string="Frage 4")
     question_5 = fields.Text(string="Frage 5")
 
+    number_question_1 = fields.Integer(string="Nummerische Frage 1")
+    number_question_2 = fields.Integer(string="Nummerische Frage 2")
+    number_question_3 = fields.Integer(string="Nummerische Frage 3")
+    number_question_4 = fields.Integer(string="Nummerische Frage 4")
+    number_question_5 = fields.Integer(string="Nummerische Frage 5")
+    number_question_6 = fields.Integer(string="Nummerische Frage 6")
+    number_question_7 = fields.Integer(string="Nummerische Frage 7")
+    number_question_8 = fields.Integer(string="Nummerische Frage 8")
+    number_question_9 = fields.Integer(string="Nummerische Frage 9")
+    number_question_10 = fields.Integer(string="Nummerische Frage 10")
+
     # Connect to survey addon
     survey_id = fields.Many2one('survey.survey', 'Survey', readonly=True, ondelete='restrict')
     survey_user_input_id = fields.Many2one('survey.user_input', 'Survey User Input', readonly=True, ondelete='restrict')
