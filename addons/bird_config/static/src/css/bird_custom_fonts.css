@@ -129,3 +129,37 @@
     font-family: MuseoSansCnd900-Regular;
     src: url("fonts/MuseoSansCnd900-Regular.otf") format("opentype");
 }
+
+/* Sharp Grotesk */
+
+@font-face {
+    font-family: 'Sharp Grotesk 15';
+    src: url('fonts/sharp-grotesk/Bold15.woff2') format('woff2'),
+         url('fonts/sharp-grotesk/Bold15.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sharp Grotesk 20';
+    src: url('fonts/sharp-grotesk/Medium20.woff2') format('woff2'),
+         url('fonts/sharp-grotesk/Medium20.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sharp Grotesk 15';
+    src: url('fonts/sharp-grotesk/SemiBold15.woff2') format('woff2'),
+         url('fonts/sharp-grotesk/SemiBold15.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sharp Grotesk 25';
+    src: url('fonts/sharp-grotesk/SemiBold25.woff2') format('woff2'),
+         url('fonts/sharp-grotesk/SemiBold25.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
