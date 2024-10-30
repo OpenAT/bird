@@ -685,6 +685,10 @@ body[data-rootcatid="4"] .webshop_download_file {
   Neues Design
 **********************************************************************/
 
+.fsoforms_container .oe_blue {
+    background-color: #F1EDE2 !important;
+}
+
 .fsoforms_container h1,
 .fsoforms_container h2,
 .fsoforms_container h3,
