@@ -684,18 +684,23 @@ body[data-rootcatid="4"] .webshop_download_file {
 /*********************************************************************+
   Neues Design
 **********************************************************************/
-/*
-h1, h2, h3, h4, h5, h6,
-.control-label,
-.has-success .control-label,
-.has-error .control-label {
+
+.fsoforms_container h1,
+.fsoforms_container h2,
+.fsoforms_container h3,
+.fsoforms_container h4,
+.fsoforms_container h5,
+.fsoforms_container h6,
+.fsoforms_container .control-label,
+.fsoforms_container .has-success .control-label,
+.fsoforms_container .has-error .control-label {
     font-family: 'Sharp Grotesk 15', 'Arial Black';
     font-weight: 700;
     text-transform: uppercase;
     color: #05325F;
 }
 
-.form-control {
+.fsoforms_container .form-control {
     font-family: 'Sharp Grotesk 20', 'Arial Black';
     font-weight: 500;
     color: #05325F;
@@ -703,35 +708,36 @@ h1, h2, h3, h4, h5, h6,
     border: 1px solid #05325F;
     border-radius: 5px;
 }
-.has-error .form-control {
+
+.fsoforms_container  .has-error .form-control {
     color: #a94442;
 }
 
-.form-control:focus,
-.has-success .form-control:focus {
+.fsoforms_container .form-control:focus,
+.fsoforms_container .has-success .form-control:focus {
     outline: 0px;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     border: 2px solid #05325F;
 }
 
-.has-success .form-control {
+.fsoforms_container .has-success .form-control {
     outline: 0px;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     border: 1px solid #05325F;
 }
 
-input.form-control::placeholder,
-input.form-control::-webkit-input-placeholder,
-select.form-control::placeholder,
-select.form-control::-webkit-input-placeholder,
-textarea.form-control::placeholder,
-textarea.form-control::-webkit-input-placeholder {
+.fsoforms_container input.form-control::placeholder,
+.fsoforms_container input.form-control::-webkit-input-placeholder,
+.fsoforms_container select.form-control::placeholder,
+.fsoforms_container select.form-control::-webkit-input-placeholder,
+.fsoforms_container textarea.form-control::placeholder,
+.fsoforms_container textarea.form-control::-webkit-input-placeholder {
     color: #F1EDE2;
 }
 
-.btn {
+.fsoforms_container .btn {
     font-family: 'Sharp Grotesk 25', 'Arial Black';
     font-weight: 600;
     text-transform: uppercase;
@@ -745,10 +751,156 @@ textarea.form-control::-webkit-input-placeholder {
     color: white;
 }
 
-.btn:hover, .btn:active, .btn:focus {
+.fsoforms_container .btn:hover, .btn:active, .btn:focus {
     background-color: #25A937 !important;
     background-image: none;
     color: white;
 }
-*/
 
+/* ----------------------------------------------------- */
+
+.js_product h1,
+.js_product h2,
+.js_product h3,
+.js_product h4,
+.js_product h5,
+.js_product h6,
+.js_product .control-label,
+.js_product .has-success .control-label,
+.js_product .has-error .control-label {
+    font-family: 'Sharp Grotesk 15', 'Arial Black';
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #05325F;
+}
+
+.js_product .form-control {
+    font-family: 'Sharp Grotesk 20', 'Arial Black';
+    font-weight: 500;
+    color: #05325F;
+    font-size: 16px;
+    border: 1px solid #05325F;
+    border-radius: 5px;
+}
+
+.js_product  .has-error .form-control {
+    color: #a94442;
+}
+
+.js_product .form-control:focus,
+.js_product .has-success .form-control:focus {
+    outline: 0px;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border: 2px solid #05325F;
+}
+
+.js_product .has-success .form-control {
+    outline: 0px;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border: 1px solid #05325F;
+}
+
+.js_product input.form-control::placeholder,
+.js_product input.form-control::-webkit-input-placeholder,
+.js_product select.form-control::placeholder,
+.js_product select.form-control::-webkit-input-placeholder,
+.js_product textarea.form-control::placeholder,
+.js_product textarea.form-control::-webkit-input-placeholder {
+    color: #F1EDE2;
+}
+
+.js_product .btn {
+    font-family: 'Sharp Grotesk 25', 'Arial Black';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 0px solid transparent;
+    border-radius: 22px;
+    height: 44px;
+    padding: 12px 60px;
+    background-color: #25A937;
+    background-image: none;
+    color: white;
+}
+
+.js_product .btn:hover, .btn:active, .btn:focus {
+    background-color: #25A937 !important;
+    background-image: none;
+    color: white;
+}
+
+/* ----------------------------------------------------- */
+
+.wsd_checkout_page_content h1,
+.wsd_checkout_page_content h2,
+.wsd_checkout_page_content h3,
+.wsd_checkout_page_content h4,
+.wsd_checkout_page_content h5,
+.wsd_checkout_page_content h6,
+.wsd_checkout_page_content .control-label,
+.wsd_checkout_page_content .has-success .control-label,
+.wsd_checkout_page_content .has-error .control-label {
+    font-family: 'Sharp Grotesk 15', 'Arial Black';
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #05325F;
+}
+
+.wsd_checkout_page_content .form-control {
+    font-family: 'Sharp Grotesk 20', 'Arial Black';
+    font-weight: 500;
+    color: #05325F;
+    font-size: 16px;
+    border: 1px solid #05325F;
+    border-radius: 5px;
+}
+
+.wsd_checkout_page_content  .has-error .form-control {
+    color: #a94442;
+}
+
+.wsd_checkout_page_content .form-control:focus,
+.wsd_checkout_page_content .has-success .form-control:focus {
+    outline: 0px;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border: 2px solid #05325F;
+}
+
+.wsd_checkout_page_content .has-success .form-control {
+    outline: 0px;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border: 1px solid #05325F;
+}
+
+.wsd_checkout_page_content input.form-control::placeholder,
+.wsd_checkout_page_content input.form-control::-webkit-input-placeholder,
+.wsd_checkout_page_content select.form-control::placeholder,
+.wsd_checkout_page_content select.form-control::-webkit-input-placeholder,
+.wsd_checkout_page_content textarea.form-control::placeholder,
+.wsd_checkout_page_content textarea.form-control::-webkit-input-placeholder {
+    color: #F1EDE2;
+}
+
+.wsd_checkout_page_content .btn {
+    font-family: 'Sharp Grotesk 25', 'Arial Black';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 0px solid transparent;
+    border-radius: 22px;
+    height: 44px;
+    padding: 12px 60px;
+    background-color: #25A937;
+    background-image: none;
+    color: white;
+}
+
+.wsd_checkout_page_content .btn:hover, .btn:active, .btn:focus {
+    background-color: #25A937 !important;
+    background-image: none;
+    color: white;
+}
