@@ -684,7 +684,7 @@ body[data-rootcatid="4"] .webshop_download_file {
 /*********************************************************************+
   Neues Design
 **********************************************************************/
-
+/*
 h1, h2, h3, h4, h5, h6,
 .control-label,
 .has-success .control-label,
@@ -750,3 +750,5 @@ textarea.form-control::-webkit-input-placeholder {
     background-image: none;
     color: white;
 }
+*/
+
