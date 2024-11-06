@@ -682,7 +682,7 @@ body[data-rootcatid="4"] .webshop_download_file {
 }
 
 /*********************************************************************+
-  Neues Design
+  Design 2024
 **********************************************************************/
 
 .fsoforms_container .oe_blue {
@@ -761,6 +761,30 @@ body[data-rootcatid="4"] .webshop_download_file {
     color: white;
 }
 
+.arbitrary_price .btn {
+    font-family: 'Sharp Grotesk 20', 'Arial Black';
+    font-weight: 500;
+    font-size: 22px;
+    padding-top: 8px;
+    margin-bottom: 4px;
+}
+
+.price_donate_suggested_outer {
+    display: inline-block;
+}
+
+.price_donate_suggested_currency {
+    color: white !important;
+    margin-top: 16px !important;
+    margin-left: 6px !important;
+}
+
+#price_donate,
+#price_donate:focus {
+    background: none !important;
+    background-color: white !important;
+}
+
 /* ----------------------------------------------------- */
 
 .js_product h1,
@@ -835,6 +859,30 @@ body[data-rootcatid="4"] .webshop_download_file {
     color: white;
 }
 
+.js_product .arbitrary_price .btn {
+    font-family: 'Sharp Grotesk 20', 'Arial Black';
+    font-weight: 500;
+    font-size: 22px;
+    padding-top: 8px;
+    margin-bottom: 4px;
+}
+
+.js_product .price_donate_suggested_outer {
+    display: inline-block;
+}
+
+.js_product .price_donate_suggested_currency {
+    color: white !important;
+    margin-top: 16px !important;
+    margin-left: 6px !important;
+}
+
+.js_product #price_donate,
+.js_product #price_donate:focus {
+    background: none !important;
+    background-color: white !important;
+}
+
 /* ----------------------------------------------------- */
 
 .wsd_checkout_page_content h1,
@@ -907,4 +955,28 @@ body[data-rootcatid="4"] .webshop_download_file {
     background-color: #25A937 !important;
     background-image: none;
     color: white;
+}
+
+.wsd_checkout_page_content .arbitrary_price .btn {
+    font-family: 'Sharp Grotesk 20', 'Arial Black';
+    font-weight: 500;
+    font-size: 22px;
+    padding-top: 8px;
+    margin-bottom: 4px;
+}
+
+.wsd_checkout_page_content .price_donate_suggested_outer {
+    display: inline-block;
+}
+
+.wsd_checkout_page_content .price_donate_suggested_currency {
+    color: white !important;
+    margin-top: 16px !important;
+    margin-left: 6px !important;
+}
+
+.wsd_checkout_page_content #price_donate,
+.wsd_checkout_page_content #price_donate:focus {
+    background: none !important;
+    background-color: white !important;
 }
