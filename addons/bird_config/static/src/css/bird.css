@@ -980,3 +980,8 @@ body[data-rootcatid="4"] .webshop_download_file {
     background: none !important;
     background-color: white !important;
 }
+
+/* Hide headlines for one page checkout forms */
+#product_detail .ppt_opc_cb_inner h1 {
+    display: none;
+}
