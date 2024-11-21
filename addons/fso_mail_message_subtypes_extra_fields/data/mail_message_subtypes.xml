@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="fson_absence_notice" model="mail.message.subtype">
+            <field name="name">FS-Online Giftee</field>
+            <field name="res_model" eval="False"/>
+            <field name="default" eval="False"/>
+            <field name="xml_id">fso_mail_message_subtypes_extra_fields.fson_giftee</field>
+        </record>
+
+    </data>
+</openerp>
