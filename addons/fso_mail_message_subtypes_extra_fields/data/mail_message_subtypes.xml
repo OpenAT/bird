@@ -2,7 +2,7 @@
 <openerp>
     <data>
 
-        <record id="fson_absence_notice" model="mail.message.subtype">
+        <record id="fson_giftee" model="mail.message.subtype">
             <field name="name">FS-Online Giftee</field>
             <field name="res_model" eval="False"/>
             <field name="default" eval="False"/>
