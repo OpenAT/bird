@@ -16,11 +16,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: fso_partner_absence_notice
-#: field:res.partner,absent_until:0
-msgid "Absent until"
-msgstr "Abwesend bis"
+#: field:res.partner,giftee:0
+msgid "Giftee"
+msgstr "Beschenkte Person"
 
 #. module: fso_partner_absence_notice
 #: model:ir.model,name:fso_partner_extra_fields.model_res_partner
-msgid "Giftee"
-msgstr "Beschenkte Person"
+msgid "Partner"
+msgstr "Partner"
