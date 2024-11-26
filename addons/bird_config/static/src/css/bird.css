@@ -1018,3 +1018,14 @@ breaks more than it fixes. */
 #wsd_checkout_form_inside_row > div.col-md-12 {
     float: unset;
 }
+
+/* Smaller button padding on smaller screens
+to fix cut-off buttons */
+@media (max-width: 350px)
+{
+    .js_product .btn:not(.price_donate_suggested) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
