@@ -34,6 +34,7 @@
         <template id="facebook_pixel_code" inherit_id="website.layout" name="facebook pixel code">
             <xpath expr="//head" position="inside">
                 <link rel="shortcut icon" type="image/png" href="/bird_config/static/src/img/BirdLife_Logo_Tab.png"/>
+                <script type="text/javascript" src="/bird_config/static/src/js/price_donate.js"/>
                 <!-- Facebook Pixel Code -->
 
                 <script>
