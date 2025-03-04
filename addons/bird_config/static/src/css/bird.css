@@ -985,3 +985,47 @@ body[data-rootcatid="4"] .webshop_download_file {
 #product_detail .ppt_opc_cb_inner h1 {
     display: none;
 }
+
+/******************************** 
+Minimize left and right space
+********************************/
+/* Remove nested container margins/paddings */
+#website_sale_donate > .container,
+.one-page-checkout > .col-md-12,
+#wsd_checkout_form_inside_row > .col-md-12,
+.wsd_opc_payment > div {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* Fix right side space only */
+.billing-fields {
+    margin-right: -15px;    
+}
+
+/* Zero left margin/padding, so a gap between
+fields is still there */
+.billing-fields > .form-group {
+    margin-left: 0px;
+    padding-left: 0px;
+
+}
+
+/* Override the float "fix", it actually
+breaks more than it fixes. */
+#wsd_checkout_form_inside_row > div.col-md-12 {
+    float: unset;
+}
+
+/* Smaller button padding on smaller screens
+to fix cut-off buttons */
+@media (max-width: 350px)
+{
+    .js_product .btn:not(.price_donate_suggested) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
