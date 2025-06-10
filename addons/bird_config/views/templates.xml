@@ -31,6 +31,12 @@
 <!--            <script type="text/javascript" src="/bird_config/static/src/js/textreplace.js"/>-->
         </xpath>
     </template>
+        <template id="google_index" inherit_id="website.layout" name="google site index">
+            <xpath expr="//head" position="inside">
+                <meta name="robots" content="noindex" />
+                <meta name="google-site-verification" content="iUW2TWyt5zzlx_6iWx29-maQj59Cqn0gLqyfDjvTerI" />
+            </xpath>
+        </template>
         <template id="facebook_pixel_code" inherit_id="website.layout" name="facebook pixel code">
             <xpath expr="//head" position="inside">
                 <link rel="shortcut icon" type="image/png" href="/bird_config/static/src/img/BirdLife_Logo_Tab.png"/>
